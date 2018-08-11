@@ -38,6 +38,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ScrollBackground
+    uniqueID: 2278407051
+    locked: 0
   - name: Background
     uniqueID: 3959026215
     locked: 0
