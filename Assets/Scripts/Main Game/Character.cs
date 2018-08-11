@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public struct Character
+public class Character
 {
     private Character(string name, string description1,
         float weight, int height, int age, string entryLine, string exitLine, string[] lines,
@@ -16,6 +16,7 @@ public struct Character
         this.lines = lines;
         this.hanging = hanging;
         this.sitDown = sitDown;
+        nbSpecials = 0;
     }
 
     public readonly string name;
@@ -28,6 +29,7 @@ public struct Character
     public readonly string[] lines;
     public readonly RuntimeAnimatorController hanging;
     public readonly Sprite sitDown;
+    public int nbSpecials;
 
     public const float WeightMultiplicator = 0.33f;
 
