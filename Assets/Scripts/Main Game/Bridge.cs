@@ -2,8 +2,8 @@
 using UnityEngine.UI;
 
 [RequireComponent(typeof(BoxCollider2D))]
-public class Bridge : MonoBehaviour {
-
+public class Bridge : MonoBehaviour
+{
     [SerializeField]
     private Text lostText;
 
