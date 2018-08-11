@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (!isJumping)
         {
-            rb.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * Time.deltaTime * speed;
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * Time.deltaTime * speed - new Vector2(100f * Time.deltaTime, 0f);
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 isJumping = true;
