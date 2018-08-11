@@ -303,8 +303,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 340951435
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a1c12d72b3539fb49ba06c9e3c65e20b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -342,6 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37454a4d5218b4043be824f0221f7556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lostText: {fileID: 1610278023}
 --- !u!95 &450397502
 Animator:
   serializedVersion: 3
@@ -927,7 +928,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5570d0f2285446418a2e4cd4376b945, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lostText: {fileID: 1610278023}
 --- !u!61 &1205362952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1408,6 +1408,7 @@ GameObject:
   - component: {fileID: 1999922436}
   - component: {fileID: 1999922437}
   - component: {fileID: 1999922438}
+  - component: {fileID: 1999922439}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1457,6 +1458,18 @@ MonoBehaviour:
     type: 2}
   PilePanel: {fileID: 519278824}
   StatsPanel: {fileID: 1104196161}
+--- !u!114 &1999922439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1999922435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c594a9a8ce9ab49a254f832e06615d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trapPrefab: {fileID: 1048760825476526, guid: fed54f71cd6b2c64da23643d1370d939, type: 2}
 --- !u!1 &2095321321
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,9 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField]
+    private Text lostText;
+
     private Rigidbody2D rb;
     public float speed { set; get; }
     public List<MyCharacter> followers { set; get; }
@@ -42,5 +46,18 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(new Vector2(0f, 8f), ForceMode2D.Impulse);
             }
         }
+    }
+
+    public void Loose()
+    {
+        didLost = true;
+        rb.velocity = Vector2.zero;
+        lostText.gameObject.SetActive(true);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Trap"))
+            Loose();
     }
 }
