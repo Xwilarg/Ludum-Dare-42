@@ -21,7 +21,7 @@ public class CharacterCollector : MonoBehaviour
             collision.GetComponent<BoxCollider2D>().enabled = false;
             collision.GetComponent<Animator>().enabled = false;
             collision.transform.parent = transform;
-            collision.transform.position = transform.position + new Vector3(0f, -.2f) * (1 + Pm.PanelList.Count);
+            collision.transform.position = transform.position + new Vector3(0f, .8f) * (1 + Pm.PanelList.Count);
             MyCharacter c = collision.GetComponent<MyCharacter>();
             collision.GetComponent<SpriteRenderer>().sprite = c.me.sitDown;
             Pm.AddPileCharacter(c);
