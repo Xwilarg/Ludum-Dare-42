@@ -20,9 +20,20 @@ public class PanelManager : MonoBehaviour
 
         go.transform.SetParent(PilePanel.transform, false);
         go.transform.position = new Vector3(PanelList.Count * 100 + 30, PilePanel.transform.position.y + 50);
-        Button ButtonChild = go.GetComponent<Button>();
+        //Button ButtonChild = go.GetComponent<Button>();
         Text TextChild = go.GetComponentInChildren<Text>();
         TextChild.text = NetCharacter.name + System.Environment.NewLine + NetCharacter.weight.ToString();
         PanelList.Add(go);
+    }
+
+    public void DelPileCharacter(GameObject obj)
+    {
+        PanelList.Remove(obj);
+        obj.SetActive(false);
+
+        for (int i = 0; i < PanelList.Count; ++i)
+        {
+            PanelList[i].transform.position = new Vector3(i * 100 + 30, PanelList[i].transform.position.y);
+        }
     }
 }

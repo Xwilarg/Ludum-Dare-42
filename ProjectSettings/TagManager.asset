@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Character
   - Trap
+  - GameManager
   layers:
   - Default
   - TransparentFX
