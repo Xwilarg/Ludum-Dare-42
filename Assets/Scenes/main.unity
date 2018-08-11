@@ -356,6 +356,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &519278824 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1166644714098472, guid: 043631939b67c364abf12eda01f401d0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1302830321}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,6 +643,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1104196161 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1762862850011154, guid: 2791d6a778d914b4cb2cf966c89848cf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1188686694}
 --- !u!1001 &1173061600
 Prefab:
   m_ObjectHideFlags: 0
@@ -953,6 +963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bb364dde50e53429bc06467000d41a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pm: {fileID: 1999922438}
 --- !u!61 &1219258313
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1357,6 +1368,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1999922436}
   - component: {fileID: 1999922437}
+  - component: {fileID: 1999922438}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1391,6 +1403,21 @@ MonoBehaviour:
   characPrefab: {fileID: 1404340795655378, guid: 87fb70ce2796c0d478bd7b7ab062a8dc,
     type: 2}
   descriptionPanel: {fileID: 0}
+--- !u!114 &1999922438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1999922435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ff0c6e1ecba4df47bba956f8d1acf4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CharacterPanelPrefab: {fileID: 1730286697386602, guid: 8117af9de8dede544a5243cc8eafbb5f,
+    type: 2}
+  PilePanel: {fileID: 519278824}
+  StatsPanel: {fileID: 1104196161}
 --- !u!1 &2095321321
 GameObject:
   m_ObjectHideFlags: 0

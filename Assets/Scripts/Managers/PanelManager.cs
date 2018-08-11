@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class PanelManager : MonoBehaviour
 {
     [SerializeField]
     private GameObject CharacterPanelPrefab;
@@ -13,11 +13,6 @@ public class GameManager : MonoBehaviour
     private GameObject StatsPanel;
 
     private List<GameObject> PanelList = new List<GameObject>();
-    
-
-    private void Start()
-    {
-    }
 
     public void AddPileCharacter(Character NetCharacter)
     {
@@ -28,6 +23,6 @@ public class GameManager : MonoBehaviour
         Button ButtonChild = go.GetComponent<Button>();
         Text TextChild = go.GetComponentInChildren<Text>();
         TextChild.text = NetCharacter.name + System.Environment.NewLine + NetCharacter.weight.ToString();
-        PanelList.Add(go);   
+        PanelList.Add(go);
     }
 }

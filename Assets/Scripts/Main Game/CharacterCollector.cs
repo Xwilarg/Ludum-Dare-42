@@ -4,6 +4,8 @@
 public class CharacterCollector : MonoBehaviour
 {
     private PlayerController master;
+    [SerializeField]
+    private PanelManager Pm;
 
     private void Start()
     {
@@ -29,6 +31,7 @@ public class CharacterCollector : MonoBehaviour
             }
             MyCharacter c = collision.GetComponent<MyCharacter>();
             master.followers.Add(c);
+            Pm.AddPileCharacter(c.me);
             master.speed -= c.me.weight;
         }
     }
