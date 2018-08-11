@@ -7,9 +7,9 @@
         this.weight = weight;
     }
 
-    private readonly string name;
-    private readonly string description;
-    private readonly int weight;
+    public readonly string name;
+    public readonly string description;
+    public readonly int weight;
 
     public static Character dummy1 = new Character("Dummy One", "First dummy character", 80);
     public static Character dummy2 = new Character("Dummy Two", "Second dummy character", 105);

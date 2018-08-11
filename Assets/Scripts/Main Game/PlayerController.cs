@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private const float speed = 300f;
+    private float speed = 300f;
     private List<MyCharacter> followers;
 
     public bool didLost { set; private get; }
@@ -39,7 +39,9 @@ public class PlayerController : MonoBehaviour
                 collision.transform.parent = charac.transform;
                 collision.transform.position = charac.transform.position + new Vector3(0f, -.2f);
             }
-            followers.Add(collision.GetComponent<MyCharacter>());
+            MyCharacter c = collision.GetComponent<MyCharacter>();
+            followers.Add(c);
+            speed -= c.me.weight;
         }
     }
 }

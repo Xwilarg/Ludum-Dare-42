@@ -2,5 +2,5 @@
 
 public class MyCharacter : MonoBehaviour
 {
-    public Character me { set; private get; }
+    public Character me { set; get; }
 }
