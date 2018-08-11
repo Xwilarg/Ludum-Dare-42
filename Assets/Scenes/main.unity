@@ -1402,6 +1402,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characPrefab: {fileID: 1404340795655378, guid: 87fb70ce2796c0d478bd7b7ab062a8dc,
     type: 2}
+  descriptionPanel: {fileID: 2095321321}
 --- !u!114 &1999922438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1417,7 +1418,6 @@ MonoBehaviour:
     type: 2}
   PilePanel: {fileID: 519278824}
   StatsPanel: {fileID: 1104196161}
-  descriptionPanel: {fileID: 2095321321}
 --- !u!1 &2095321321
 GameObject:
   m_ObjectHideFlags: 0
