@@ -57,6 +57,6 @@ public class PanelManager : MonoBehaviour
         {
             PanelList[i].a.transform.position = new Vector3(i * 100 + 30, PanelList[i].a.transform.position.y);
         }
-        PlayerCntl.speed += 0.1f;
+        PlayerCntl.speed += tof.b.me.weight;
     }
 }
