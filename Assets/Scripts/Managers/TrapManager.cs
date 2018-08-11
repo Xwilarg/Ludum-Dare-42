@@ -20,7 +20,7 @@ public class TrapManager : MonoBehaviour
         if (timer < 0f)
         {
             timer = Random.Range(refTimer.x, refTimer.y);
-            Instantiate(trapPrefab, new Vector2(10f, Random.Range(-0.3f, 0.5f)), Quaternion.identity);
+            Instantiate(trapPrefab, new Vector2(10f, Random.Range(-1.5f, 2f)), Quaternion.identity);
         }
     }
 }
