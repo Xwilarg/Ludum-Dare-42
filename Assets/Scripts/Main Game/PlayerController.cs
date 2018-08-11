@@ -28,7 +28,10 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         if (didLost)
+        {
+            Time.timeScale = 0f;
             return;
+        }
         anim.speed = speed / 300f;
         if (isJumping && transform.position.y <= jumpPos.y)
         {
@@ -59,7 +62,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Trap") && !isJumping)
+        if ((collision.CompareTag("Trap") && !isJumping)
+            || collision.CompareTag("Beast"))
             Loose();
     }
 }
