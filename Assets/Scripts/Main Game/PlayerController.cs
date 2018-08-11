@@ -5,8 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private float speed = 300f;
-    private List<MyCharacter> followers;
+    public float speed { set; get; }
+    public List<MyCharacter> followers { set; get; }
+    public bool isJumping { private set; get; }
+    private Vector2 jumpPos;
 
     public bool didLost { set; private get; }
 
@@ -14,34 +16,29 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         followers = new List<MyCharacter>();
+        isJumping = false;
+        speed = 300f;
     }
 
     private void Update()
     {
         if (didLost)
             return;
-        rb.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * Time.deltaTime * speed;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Character"))
+        if (isJumping && transform.position.y <= jumpPos.y)
         {
-            collision.GetComponent<BackgroundScroll>().enabled = false;
-            if (followers.Count == 0)
+            isJumping = false;
+            rb.gravityScale = 0f;
+        }
+        else if (!isJumping)
+        {
+            rb.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * Time.deltaTime * speed;
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                collision.transform.parent = transform;
-                collision.transform.position = transform.position + new Vector3(0f, -.2f);
+                isJumping = true;
+                jumpPos = transform.position;
+                rb.gravityScale = 1f;
+                rb.AddForce(new Vector2(0f, 8f), ForceMode2D.Impulse);
             }
-            else
-            {
-                MyCharacter charac = followers[followers.Count - 1];
-                collision.transform.parent = charac.transform;
-                collision.transform.position = charac.transform.position + new Vector3(0f, -.2f);
-            }
-            MyCharacter c = collision.GetComponent<MyCharacter>();
-            followers.Add(c);
-            speed -= c.me.weight;
         }
     }
 }

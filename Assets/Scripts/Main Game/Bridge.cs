@@ -9,7 +9,7 @@ public class Bridge : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !collision.GetComponent<PlayerController>().isJumping)
         {
             collision.GetComponent<PlayerController>().didLost = true;
             collision.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
