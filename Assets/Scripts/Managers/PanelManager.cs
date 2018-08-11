@@ -40,6 +40,7 @@ public class PanelManager : MonoBehaviour
         go.transform.SetParent(PilePanel.transform, false);
         go.transform.position = new Vector3(PanelList.Count * 100 + 30, PilePanel.transform.position.y + 50);
         go.GetComponentInChildren<Button>().onClick.AddListener(NetCharacter.DisplayDescriptionPanel);
+        go.GetComponent<CharacterPanelDelete>().me = NetCharacter;
         Text TextChild = go.GetComponentInChildren<Text>();
         TextChild.text = NetCharacter.me.name + System.Environment.NewLine + NetCharacter.me.weight.ToString();
         PanelList.Add(new MTuple<GameObject, MyCharacter>(go, NetCharacter));
