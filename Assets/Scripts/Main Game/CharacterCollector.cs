@@ -33,8 +33,8 @@ public class CharacterCollector : MonoBehaviour
             master.followers.Add(c);
             Pm.AddPileCharacter(c.me);
             master.speed -= c.me.weight;
-            if (master.speed < 0f)
-                master.speed = 0f;
+            if (master.speed < 0.1f)
+                master.speed = 0.1f;
         }
     }
 }
