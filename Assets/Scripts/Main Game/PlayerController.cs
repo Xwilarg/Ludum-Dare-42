@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private Text lostText;
+    [SerializeField]
+    private GameObject gameOverPanel;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         rb = GetComponent<Rigidbody2D>();
         isJumping = false;
         speed = 300f;
@@ -29,7 +32,11 @@ public class PlayerController : MonoBehaviour
     {
         if (didLost)
         {
-            Time.timeScale = 0f;
+            if (!gameOverPanel.activeInHierarchy)
+            {
+                Time.timeScale = 0f;
+                gameOverPanel.SetActive(true);
+            }
             return;
         }
         anim.speed = speed / 300f;
