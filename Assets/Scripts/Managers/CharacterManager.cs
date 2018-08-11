@@ -26,10 +26,10 @@ public class CharacterManager : MonoBehaviour
         if (timer < 0f)
         {
             timer = Random.Range(refTimer.x, refTimer.y);
-            GameObject go = Instantiate(characPrefab, new Vector2(10f, Random.Range(3f, 4f)), Quaternion.Euler(new Vector3(0f, 0f, 180f)));
+            GameObject go = Instantiate(characPrefab, new Vector2(10f, Random.Range(3f, 4f)), Quaternion.identity);
             MyCharacter charac = go.GetComponent<MyCharacter>();
-            characPrefab.GetComponent<Animator>().runtimeAnimatorController = charac.me.hanging;
             charac.me = Character.basicCharacters[Random.Range(0, Character.basicCharacters.Length)];
+            go.GetComponent<Animator>().runtimeAnimatorController = charac.me.hanging;
             charac.SetDescriptionPanel(descriptionPanel, nameText, description1, description2, description3, image);
         }
     }
