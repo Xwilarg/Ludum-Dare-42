@@ -18,6 +18,7 @@ public class CharacterCollector : MonoBehaviour
         {
             collision.GetComponent<BackgroundScroll>().enabled = false;
             collision.transform.GetChild(0).gameObject.SetActive(false);
+            collision.GetComponent<BoxCollider2D>().enabled = false;
             if (Pm.PanelList.Count == 0)
             {
                 collision.transform.parent = transform;
