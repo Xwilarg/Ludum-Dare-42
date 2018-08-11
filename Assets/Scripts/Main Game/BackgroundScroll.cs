@@ -6,13 +6,13 @@ public class BackgroundScroll : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(new Vector2(0f, -speed * Time.deltaTime));
-        if (transform.position.y < -7.5)
+        transform.Translate(new Vector2(speed * Time.deltaTime, 0f));
+        if (transform.position.x > 11)
         {
             if (tag == "Character")
                 Destroy(gameObject);
             else
-                transform.Translate(new Vector2(0f, 15f));
+                transform.Translate(new Vector2(-25f, 0f));
         }
     }
 }
