@@ -21,6 +21,11 @@ public class MyCharacter : MonoBehaviour
 
     private void OnMouseDown()
     {
+        DisplayDescriptionPanel();
+    }
+
+    public void DisplayDescriptionPanel()
+    {
         descriptionPanel.SetActive(true);
         nameText.text = me.name;
         description1.text = me.description1;
