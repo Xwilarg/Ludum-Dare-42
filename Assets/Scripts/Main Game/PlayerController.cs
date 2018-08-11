@@ -3,12 +3,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Animator))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private Text lostText;
 
     private Rigidbody2D rb;
+    private Animator anim;
     public float speed { set; get; }
     public bool isJumping { private set; get; }
     private Vector2 jumpPos;
@@ -20,12 +22,14 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         isJumping = false;
         speed = 300f;
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
     {
         if (didLost)
             return;
+        anim.speed = speed / 300f;
         if (isJumping && transform.position.y <= jumpPos.y)
         {
             isJumping = false;
