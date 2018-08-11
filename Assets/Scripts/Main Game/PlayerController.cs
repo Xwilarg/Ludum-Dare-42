@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
                 rb.gravityScale = 1f;
                 rb.velocity = new Vector2(rb.velocity.x, 0f);
                 transform.Translate(new Vector2(0f, 0.05f));
-                rb.AddForce(new Vector2(0f, 8f), ForceMode2D.Impulse);
+                rb.AddForce(new Vector2(0f, speed / 37.5f), ForceMode2D.Impulse);
             }
         }
     }
