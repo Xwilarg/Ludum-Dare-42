@@ -3,6 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public struct MTuple<T1, T2>
+{
+    public MTuple(T1 a, T2 b)
+    {
+        this.a = a;
+        this.b = b;
+    }
+    public T1 a;
+    public T2 b;
+}
+
 public class PanelManager : MonoBehaviour
 {
     [SerializeField]
@@ -12,9 +23,17 @@ public class PanelManager : MonoBehaviour
     [SerializeField]
     private GameObject StatsPanel;
 
-    private List<GameObject> PanelList = new List<GameObject>();
+    private GameObject PlayerCntlObj;
+    private PlayerController PlayerCntl;
+    public List<MTuple<GameObject, MyCharacter>> PanelList = new List<MTuple<GameObject, MyCharacter>>();
 
-    public void AddPileCharacter(Character NetCharacter)
+    public void Start()
+    {
+        PlayerCntlObj = GameObject.FindGameObjectWithTag("Player");
+        PlayerCntl = PlayerCntlObj.GetComponent<PlayerController>();
+    }
+
+    public void AddPileCharacter(MyCharacter NetCharacter)
     {
         GameObject go = Instantiate(CharacterPanelPrefab, new Vector3(0, 0, 0), Quaternion.identity);
 
@@ -22,18 +41,22 @@ public class PanelManager : MonoBehaviour
         go.transform.position = new Vector3(PanelList.Count * 100 + 30, PilePanel.transform.position.y + 50);
         //Button ButtonChild = go.GetComponent<Button>();
         Text TextChild = go.GetComponentInChildren<Text>();
-        TextChild.text = NetCharacter.name + System.Environment.NewLine + NetCharacter.weight.ToString();
-        PanelList.Add(go);
+        TextChild.text = NetCharacter.me.name + System.Environment.NewLine + NetCharacter.me.weight.ToString();
+        PanelList.Add(new MTuple<GameObject, MyCharacter>(go, NetCharacter));
     }
 
     public void DelPileCharacter(GameObject obj)
     {
-        PanelList.Remove(obj);
-        obj.SetActive(false);
+        MTuple<GameObject, MyCharacter> tof = PanelList.Find(x => x.a == obj);
+
+        PanelList.Remove(tof);
+        tof.a.SetActive(false);
+        tof.b.gameObject.SetActive(false); /* TODO jump and fall on left */
 
         for (int i = 0; i < PanelList.Count; ++i)
         {
-            PanelList[i].transform.position = new Vector3(i * 100 + 30, PanelList[i].transform.position.y);
+            PanelList[i].a.transform.position = new Vector3(i * 100 + 30, PanelList[i].a.transform.position.y);
         }
+        PlayerCntl.speed += 0.1f;
     }
 }

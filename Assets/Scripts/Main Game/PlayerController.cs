@@ -7,10 +7,11 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private Text lostText;
+    [SerializeField]
+    private PanelManager Pm;
 
     private Rigidbody2D rb;
     public float speed { set; get; }
-    public List<MyCharacter> followers { set; get; }
     public bool isJumping { private set; get; }
     private Vector2 jumpPos;
 
@@ -19,7 +20,6 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        followers = new List<MyCharacter>();
         isJumping = false;
         speed = 300f;
     }

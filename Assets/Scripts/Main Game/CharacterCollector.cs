@@ -18,20 +18,19 @@ public class CharacterCollector : MonoBehaviour
         {
             collision.GetComponent<BackgroundScroll>().enabled = false;
             collision.transform.GetChild(0).gameObject.SetActive(false);
-            if (master.followers.Count == 0)
+            if (Pm.PanelList.Count == 0)
             {
                 collision.transform.parent = transform;
                 collision.transform.position = transform.position + new Vector3(0f, -.2f);
             }
             else
             {
-                MyCharacter charac = master.followers[master.followers.Count - 1];
+                MyCharacter charac = Pm.PanelList[Pm.PanelList.Count - 1].b;
                 collision.transform.parent = charac.transform;
                 collision.transform.position = charac.transform.position + new Vector3(0f, -.2f);
             }
             MyCharacter c = collision.GetComponent<MyCharacter>();
-            master.followers.Add(c);
-            Pm.AddPileCharacter(c.me);
+            Pm.AddPileCharacter(c);
             master.speed -= c.me.weight;
             if (master.speed < 0.1f)
                 master.speed = 0.1f;
