@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private Text lostText;
+    [SerializeField]
+    private GameObject gameOverPanel;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1f;
         rb = GetComponent<Rigidbody2D>();
         isJumping = false;
         speed = 300f;
@@ -28,7 +31,14 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         if (didLost)
+        {
+            if (!gameOverPanel.activeInHierarchy)
+            {
+                Time.timeScale = 0f;
+                gameOverPanel.SetActive(true);
+            }
             return;
+        }
         anim.speed = speed / 300f;
         if (isJumping && transform.position.y <= jumpPos.y)
         {
@@ -59,7 +69,8 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Trap") && !isJumping)
+        if ((collision.CompareTag("Trap") && !isJumping)
+            || collision.CompareTag("Beast"))
             Loose();
     }
 }

@@ -7,4 +7,14 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("intro");
     }
+
+    public void Replay()
+    {
+        SceneManager.LoadScene("main");
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
