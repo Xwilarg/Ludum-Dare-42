@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -6,6 +7,10 @@ public class CharacterManager : MonoBehaviour
     private GameObject characPrefab;
     [SerializeField]
     private GameObject descriptionPanel;
+    [SerializeField]
+    private Text nameText, description1, description2, description3;
+    [SerializeField]
+    private Image image;
 
     private readonly Vector2 refTimer = new Vector2(3f, 5f);
     private float timer;
@@ -24,7 +29,7 @@ public class CharacterManager : MonoBehaviour
             GameObject go = Instantiate(characPrefab, new Vector2(10f, Random.Range(2f, 4f)), Quaternion.Euler(new Vector3(0f, 0f, 180f)));
             MyCharacter charac = go.GetComponent<MyCharacter>();
             charac.me = Character.basicCharacters[Random.Range(0, Character.basicCharacters.Length)];
-            charac.SetDescriptionPanel(descriptionPanel);
+            charac.SetDescriptionPanel(descriptionPanel, nameText, description1, description2, description3, image);
         }
     }
 }
