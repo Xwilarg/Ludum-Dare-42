@@ -42,7 +42,7 @@ public class PanelManager : MonoBehaviour
         go.GetComponentInChildren<Button>().onClick.AddListener(NetCharacter.DisplayDescriptionPanel);
         go.GetComponent<CharacterPanelDelete>().me = NetCharacter;
         Text TextChild = go.GetComponentInChildren<Text>();
-        TextChild.text = NetCharacter.me.name + System.Environment.NewLine + NetCharacter.me.weight.ToString();
+        TextChild.text = NetCharacter.me.name + System.Environment.NewLine + (NetCharacter.me.weight / Character.WeightMultiplicator).ToString() + " kg";
         PanelList.Add(new MTuple<GameObject, MyCharacter>(go, NetCharacter));
     }
 
