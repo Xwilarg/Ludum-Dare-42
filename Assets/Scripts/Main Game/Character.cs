@@ -45,5 +45,19 @@ public class Character
             "You... won't throw me away, will you ?",
             "You really run fast, that remind me when we were at primary school..."
         }, Resources.Load<RuntimeAnimatorController>("Tsundere/HangingState"), Resources.Load<Sprite>("Tsundere/SitDown"));
-    public static Character[] basicCharacters = new Character[] { tsundere };
+
+    public static Character drunkMan = new Character("Jhon Joe Jimbob",
+        "Lost his parents at age 14 and found resilience in alcohol, will probably lose his life too now, that’s sad, but he is fat, so it’s funny.",
+        84f, 178, 37,
+        "Damn, it sWaYs!",
+        "Leave me here, I'll throw up",
+        new string[] {
+            "A little drink milady ?",
+            "Hooo gangster, holds up!",
+            "Hello cutie, wanna see my giant beast ? ^^",
+            "I think he’s following us, not sure, I might be stoned too",
+            "You know, I always thought that my left toe was bigger than my right one fhehe"
+        }, Resources.Load<RuntimeAnimatorController>("DrunkMan/HangingState"), Resources.Load<Sprite>("DrunkMan/SitDown"));
+
+    public static Character[] basicCharacters = new Character[] { tsundere, drunkMan };
 }
