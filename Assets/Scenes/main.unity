@@ -1390,7 +1390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characPrefab: {fileID: 1404340795655378, guid: 87fb70ce2796c0d478bd7b7ab062a8dc,
     type: 2}
-  descriptionPanel: {fileID: 0}
+  descriptionPanel: {fileID: 2095321321}
 --- !u!1 &2095321321
 GameObject:
   m_ObjectHideFlags: 0
