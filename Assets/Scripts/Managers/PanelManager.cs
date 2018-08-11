@@ -46,10 +46,11 @@ public class PanelManager : MonoBehaviour
         PanelList.Add(new MTuple<GameObject, MyCharacter>(go, NetCharacter));
     }
 
-    public void DelPileCharacter(GameObject obj)
+    public IEnumerator DelPileCharacter(GameObject obj)
     {
         MTuple<GameObject, MyCharacter> tof = PanelList.Find(x => x.a == obj);
-
+        tof.a.GetComponent<CharacterPanelDelete>().StartTimer(tof.b.me.exitLine);
+        yield return new WaitForSeconds(2);
         PanelList.Remove(tof);
         tof.a.SetActive(false);
         tof.b.gameObject.transform.parent = null;

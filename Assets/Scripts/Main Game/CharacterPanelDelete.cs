@@ -11,7 +11,7 @@ public class CharacterPanelDelete : MonoBehaviour {
     private Text textSpeak;
     public MyCharacter me { set; private get; }
 
-    private const float refTimer = 3f;
+    private const float refTimer = 2f;
     private float timer;
     private PanelManager Pm;
 
@@ -22,7 +22,7 @@ public class CharacterPanelDelete : MonoBehaviour {
         StartTimer(me.me.entryLine);
     }
 
-    private void StartTimer(string text)
+    public void StartTimer(string text)
     {
         timer = refTimer;
         textSpeak.text = text;
@@ -42,6 +42,6 @@ public class CharacterPanelDelete : MonoBehaviour {
 
     public void DeleteMe(GameObject obj)
     {
-        Pm.DelPileCharacter(obj);
+        StartCoroutine(Pm.DelPileCharacter(obj));
     }
 }
