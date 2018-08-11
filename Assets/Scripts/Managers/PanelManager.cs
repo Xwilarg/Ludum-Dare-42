@@ -51,7 +51,11 @@ public class PanelManager : MonoBehaviour
 
         PanelList.Remove(tof);
         tof.a.SetActive(false);
-        tof.b.gameObject.SetActive(false); /* TODO jump and fall on left */
+        tof.b.gameObject.transform.parent = null;
+        Rigidbody2D rb = tof.b.GetComponent<Rigidbody2D>();
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.AddForce(new Vector2(-15f, 8f), ForceMode2D.Impulse);
+        rb.AddTorque(20f, ForceMode2D.Impulse);
 
         for (int i = 0; i < PanelList.Count; ++i)
         {

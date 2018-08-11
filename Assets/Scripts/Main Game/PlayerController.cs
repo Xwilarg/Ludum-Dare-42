@@ -7,8 +7,6 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField]
     private Text lostText;
-    [SerializeField]
-    private PanelManager Pm;
 
     private Rigidbody2D rb;
     public float speed { set; get; }
