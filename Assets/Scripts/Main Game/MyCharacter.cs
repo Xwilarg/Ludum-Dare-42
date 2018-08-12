@@ -8,12 +8,10 @@ public class MyCharacter : MonoBehaviour
     private Text nameText, description1, description2, description3;
     private Image image;
 
-    public void SetDescriptionPanel(GameObject go, Text nameText, Text description1, Text description2, Text description3, Image image)
+    public void SetDescriptionPanel(GameObject go, Text nameText, Text description1, Image image)
     {
         this.nameText = nameText;
         this.description1 = description1;
-        this.description2 = description2;
-        this.description3 = description3;
         this.image = image;
         descriptionPanel = go;
         descriptionPanel.GetComponentInChildren<Button>().onClick.AddListener(ResetWordTime);

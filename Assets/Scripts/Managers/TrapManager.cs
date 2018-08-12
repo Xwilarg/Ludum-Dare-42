@@ -5,6 +5,7 @@ public class TrapManager : MonoBehaviour
     [SerializeField]
     private GameObject trapPrefab;
     [SerializeField]
+    private GameObject player;
 
     private readonly Vector2 refTimer = new Vector2(0.5f, 2f);
     private float timer;
@@ -20,7 +21,7 @@ public class TrapManager : MonoBehaviour
         if (timer < 0f)
         {
             timer = Random.Range(refTimer.x, refTimer.y);
-            Instantiate(trapPrefab, new Vector2(10f, Random.Range(-1.5f, 1.5f)), Quaternion.identity);
+            Instantiate(trapPrefab, new Vector2(15f, Random.Range(-1.5f, 1.5f)), Quaternion.identity);
         }
     }
 }
