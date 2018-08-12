@@ -16,7 +16,7 @@ public class SummonMini : MonoBehaviour
 	void Update () {
         float rDelta = Time.time;
 
-        if (rDelta - delta > 1f)
+        if (rDelta - delta > 3f)
         {
             GameObject mini = Instantiate(MiniPrefab, transform.position, Quaternion.identity);
             delta = rDelta;
