@@ -13,6 +13,7 @@ public class ProgressBar : MonoBehaviour
 
     private void Update()
     {
-        playerUI.Translate(new Vector3(player.speed / 6000f, 0f, 0f));
+        if (!player.didLost)
+            playerUI.Translate(new Vector3(player.speed / 6000f, 0f, 0f));
     }
 }

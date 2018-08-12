@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     private Text lostText;
     [SerializeField]
     private GameObject gameOverPanel;
+    [SerializeField]
+    private Image[] images;
+    private int index;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -17,7 +20,7 @@ public class PlayerController : MonoBehaviour
     public bool isJumping { private set; get; }
     private Vector2 jumpPos;
 
-    public bool didLost { set; private get; }
+    public bool didLost { set; get; }
 
     private void Start()
     {
@@ -26,6 +29,7 @@ public class PlayerController : MonoBehaviour
         isJumping = false;
         speed = 300f;
         anim = GetComponent<Animator>();
+        index = 0;
     }
 
     private void Update()
@@ -69,8 +73,20 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if ((collision.CompareTag("Trap") && !isJumping)
-            || collision.CompareTag("Beast"))
+        if (collision.CompareTag("Trap") && !isJumping)
+        {
+            if (index == images.Length - 1)
+            {
+                images[index].color = Color.white;
+                Loose();
+            }
+            else
+            {
+                images[index].color = Color.white;
+                index++;
+            }
+        }
+        if (collision.CompareTag("Beast"))
             Loose();
     }
 }
