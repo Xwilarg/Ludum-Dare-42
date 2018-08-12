@@ -35,5 +35,5 @@ public class Weapon
 
     public static Weapon GrenadeLauncher = new Weapon("Grenade Launcher", 50f, WeaponType.Projectile, .1f, 2, 1, Resources.Load<Sprite>("Projectiles/Grenade"), 10f, .5f);
 
-    public static Weapon[] Weapons = new Weapon[] { GrenadeLauncher };
+    public static Weapon[] Weapons = new Weapon[] { Gun };
 }

@@ -41,11 +41,21 @@ public class MyCharacter : MonoBehaviour
                 raycastTimer = 0.03f;
                 Vector2 dir = new Vector2(-1f, Random.Range(-me.weapon.deviation, me.weapon.deviation));
                 int mask = System.Convert.ToInt32("11111111111111111111100111111011", 2);
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 10f, mask);
-                Debug.Log(hit.collider);
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 1000f, mask);
                 lr.SetPosition(0, transform.position - new Vector3(0f, 0f, 1f));
                 if (hit.collider != null)
+                {
                     lr.SetPosition(1, new Vector3(hit.point.x, hit.point.y, -1f));
+                    BeastComportement cb = null;
+                    Transform t = hit.collider.transform;
+                    while (cb == null && t != null)
+                    {
+                        cb = t.GetComponent<BeastComportement>();
+                        t = t.parent;
+                    }
+                    if (cb != null)
+                        cb.TakeDamage(me.weapon.damage);
+                }
                 else
                     lr.SetPosition(1, new Vector3(dir.x, dir.y, 0f) * 100f - new Vector3(0f, 0f, 1f));
             }
