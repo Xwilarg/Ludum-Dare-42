@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 public class Character
 {
@@ -236,7 +237,7 @@ public class Character
         }, Resources.Load<RuntimeAnimatorController>("Vocaloid/HangingState"), Resources.Load<Sprite>("Vocaloid/SitDown"), Sexe.Female,
         "");
 
-    public static Character[] basicCharacters = new Character[] {
+    public static List<Character> basicCharacters = new List<Character>() {
         tsundere, drunkMan, fearfull, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Epichan, Mechanic, LostChild, Vocaloid
     };
 }
