@@ -11,6 +11,7 @@ TagManager:
   - Beast
   - Fences
   - Almanac
+  - Projectile
   layers:
   - Default
   - TransparentFX

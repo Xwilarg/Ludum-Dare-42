@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private Text scoreText;
     [SerializeField]
     private GameObject descriptionPanel;
+    public GameObject bulletPrefab;
     public float score { set; get; }
     private int index;
     private bool inTrap;

@@ -252,6 +252,6 @@ public class Character
         "");
 
     public static List<Character> basicCharacters = new List<Character>() {
-        tsundere, drunkMan, fearful, LittleSister, SportGirl
+        tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic
     };
 }
