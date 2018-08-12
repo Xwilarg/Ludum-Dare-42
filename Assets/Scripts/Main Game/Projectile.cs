@@ -10,9 +10,10 @@ public class Projectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        transform.rotation = 
-            Quaternion.Euler(0f, 0f, Quaternion.LookRotation(transform.position + new Vector3(rb.velocity.x, rb.velocity.y, 0f)).eulerAngles.z);
+        Vector2 v = rb.velocity;
+        var angle = Mathf.Atan2(v.y, v.x) * Mathf.Rad2Deg - 90;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 }
