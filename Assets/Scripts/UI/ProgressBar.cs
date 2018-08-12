@@ -19,7 +19,7 @@ public class ProgressBar : MonoBehaviour
     {
         if (!player.didLost)
             playerUI.Translate(new Vector3(player.speed / 6000f, 0f, 0f));
-        if (playerUI.position.x >= 120f)
+        if (playerUI.localPosition.x >= 120f)
         {
             GameObject go = new GameObject("WinInfos", typeof(WinCharacters));
             DontDestroyOnLoad(go);
