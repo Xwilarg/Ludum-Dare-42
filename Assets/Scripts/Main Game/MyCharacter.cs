@@ -21,7 +21,7 @@ public class MyCharacter : MonoBehaviour
 
     private void OnMouseDown()
     {
-        DisplayDescriptionPanel();
+        DisplayDescriptionPanelBullet();
     }
 
     public void DisplayDescriptionPanel()
@@ -29,6 +29,11 @@ public class MyCharacter : MonoBehaviour
         descriptionPanel.SetActive(true);
         nameText.text = me.name;
         description1.text = me.description1;
+    }
+
+    public void DisplayDescriptionPanelBullet()
+    {
+        DisplayDescriptionPanel();
         Time.timeScale = 0.1f;
     }
 
