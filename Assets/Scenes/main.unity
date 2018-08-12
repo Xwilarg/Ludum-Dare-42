@@ -612,7 +612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &257476708
 Transform:
   m_ObjectHideFlags: 0
@@ -959,6 +959,8 @@ MonoBehaviour:
   - {fileID: 1370882494}
   scoreText: {fileID: 679116175}
   descriptionPanel: {fileID: 2095321321}
+  bulletPrefab: {fileID: 1987567542050834, guid: 672247f06f300f54aae4a21761ec977b,
+    type: 2}
 --- !u!95 &450397502
 Animator:
   serializedVersion: 3
@@ -2154,7 +2156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1085851674
 Transform:
   m_ObjectHideFlags: 0

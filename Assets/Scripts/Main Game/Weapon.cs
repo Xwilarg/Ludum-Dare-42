@@ -1,6 +1,8 @@
-﻿public class Weapon
+﻿using UnityEngine;
+
+public class Weapon
 {
-    public Weapon(string name, float damage, WeaponType type, float deviation, float fireRate, int shellNb)
+    public Weapon(string name, float damage, WeaponType type, float deviation, float fireRate, int shellNb, Sprite sprite, float velocity, float baseY)
     {
         this.name = name;
         this.damage = damage;
@@ -8,6 +10,9 @@
         this.deviation = deviation;
         this.fireRate = fireRate;
         this.shellNb = shellNb;
+        this.sprite = sprite;
+        this.velocity = velocity;
+        this.baseY = baseY;
     }
 
     public enum WeaponType
@@ -22,12 +27,13 @@
     public readonly float deviation; // / 1
     public readonly float fireRate; // s
     public readonly int shellNb;
+    public readonly Sprite sprite;
+    public readonly float velocity;
+    public readonly float baseY;
 
-    public static Weapon Gun = new Weapon("Gun", 10f, WeaponType.Raycast, .1f, 1, 1);
+    public static Weapon Gun = new Weapon("Gun", 10f, WeaponType.Raycast, .1f, 1, 1, null, float.PositiveInfinity, 0f);
 
-    public static Weapon HeavyMachineGun = new Weapon("Heavy Machinegun", 2f, WeaponType.Raycast, 1f, 0.01f, 1);
+    public static Weapon GrenadeLauncher = new Weapon("Grenade Launcher", 50f, WeaponType.Projectile, .1f, 2, 1, Resources.Load<Sprite>("Projectiles/Grenade"), 10f, .5f);
 
-    public static Weapon Shotgun = new Weapon("Shotgun", 2f, WeaponType.Raycast, .8f, 1.5f, 20);
-
-    public static Weapon[] Weapons = new Weapon[] { Gun };
+    public static Weapon[] Weapons = new Weapon[] { GrenadeLauncher };
 }
