@@ -44,7 +44,7 @@ public class Character
     public readonly string winAlone;
     public Weapon weapon;
 
-    public const float WeightMultiplicator = 0.33f;
+    public const float WeightMultiplicator = 0.03f;
 
     public static Character clone = new Character("Clone",
         "Your childhood friend that definitly doesn't like you, you idiot!\nShe got rejected many times at medium school so she now is afraid to confess.",
