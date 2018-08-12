@@ -11,13 +11,12 @@ public class FenceScroll : MonoBehaviour {
 
 	void Start () {
         rb2d = GetComponent<Rigidbody2D>();
-        ScrollSpeed = Pc.speed / 50;
+        ScrollSpeed = Pc.speed * Time.deltaTime;
         rb2d.velocity = new Vector2(-ScrollSpeed, 0);
 	}
 	
-	// Update is called once per frame
 	void Update () {
-        ScrollSpeed = Pc.speed / 50;
+        ScrollSpeed = Pc.speed * Time.deltaTime;
         rb2d.velocity = new Vector2(-ScrollSpeed, 0);
     }
 }
