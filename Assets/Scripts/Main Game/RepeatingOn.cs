@@ -15,13 +15,13 @@ public class RepeatingOn : MonoBehaviour
 	
 	void Update ()
     {
-        if (transform.position.x < -Hlen)
+        if (transform.position.x + Hlen <= 0)
             Reposition();
 	}
 
     private void Reposition()
     {
-        Vector2 offset = new Vector2(Hlen * 2f, 0f);
-        transform.position = (Vector2)transform.position + offset;
+        Vector3 offset = new Vector3(Hlen * 2.0f, 0f, 0f);
+        transform.position += offset;
     }
 }
