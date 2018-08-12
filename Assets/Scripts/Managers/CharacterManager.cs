@@ -31,7 +31,6 @@ public class CharacterManager : MonoBehaviour
             GameObject go = Instantiate(characPrefab, new Vector2(10f, Random.Range(3f, 4f)), Quaternion.identity);
             MyCharacter charac = go.GetComponent<MyCharacter>();
             charac.me = Character.basicCharacters[Random.Range(0, Character.basicCharacters.Count)];
-            go.transform.GetChild(0).transform.position -= charac.me.offset;
             Character.basicCharacters.Remove(charac.me);
             go.GetComponent<Animator>().runtimeAnimatorController = charac.me.hanging;
             charac.SetDescriptionPanel(descriptionPanel, nameText, description1, description2, description3, image);
