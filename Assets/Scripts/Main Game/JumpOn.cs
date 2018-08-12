@@ -15,6 +15,11 @@ public class JumpOn : MonoBehaviour {
         JumpOnCharacter();
 	}
 
+    private void TakeDamage(float value)
+    {
+        Destroy(gameObject);
+    }
+
     private void Update()
     { 
         if (transform.position.y <= 0)
