@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private Image[] images;
     private int index;
+    private bool inTrap;
 
     private Rigidbody2D rb;
     private Animator anim;
@@ -30,6 +31,7 @@ public class PlayerController : MonoBehaviour
         speed = 300f;
         anim = GetComponent<Animator>();
         index = 0;
+        inTrap = false;
     }
 
     private void Update()
@@ -49,6 +51,8 @@ public class PlayerController : MonoBehaviour
             gameObject.layer = 0;
             isJumping = false;
             rb.gravityScale = 0f;
+            if (inTrap)
+                TakeDamage();
         }
         else if (!isJumping)
         {
@@ -73,20 +77,33 @@ public class PlayerController : MonoBehaviour
         lostText.gameObject.SetActive(true);
     }
 
+    private void TakeDamage()
+    {
+        if (index == images.Length - 1)
+        {
+            images[index].color = Color.white;
+            Loose();
+        }
+        else
+        {
+            images[index].color = Color.white;
+            index++;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Trap"))
+            inTrap = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Trap") && !isJumping)
+        if (collision.CompareTag("Trap"))
         {
-            if (index == images.Length - 1)
-            {
-                images[index].color = Color.white;
-                Loose();
-            }
-            else
-            {
-                images[index].color = Color.white;
-                index++;
-            }
+            inTrap = true;
+            if (!isJumping)
+                TakeDamage();
         }
         if (collision.CompareTag("Beast"))
             Loose();
