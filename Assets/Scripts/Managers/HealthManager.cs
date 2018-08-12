@@ -12,7 +12,17 @@ public class HealthManager : MonoBehaviour
 
     public void TakeDamage(float value)
     {
-        float newVal = bars[0].sizeDelta.x - value;
-        bars[0].sizeDelta = new Vector2(newVal, bars[0].sizeDelta.y);
+        if (index >= bars.Length)
+            return;
+        float newVal = bars[index].sizeDelta.x - value;
+        float depas = 0f;
+        bars[index].sizeDelta = new Vector2(newVal, bars[0].sizeDelta.y);
+        if (newVal < 0)
+        {
+            depas = -newVal;
+            index++;
+            if (index < bars.Length)
+                bars[index].sizeDelta = new Vector2(newVal, bars[0].sizeDelta.y);
+        }
     }
 }
