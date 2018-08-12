@@ -19,10 +19,12 @@ public class HealthManager : MonoBehaviour
         bars[index].sizeDelta = new Vector2(newVal, bars[0].sizeDelta.y);
         if (newVal < 0)
         {
-            depas = -newVal;
             index++;
             if (index < bars.Length)
-                bars[index].sizeDelta = new Vector2(newVal, bars[0].sizeDelta.y);
+            {
+                depas = bars[index].sizeDelta.x + newVal;
+                bars[index].sizeDelta = new Vector2(depas, bars[0].sizeDelta.y);
+            }
         }
     }
 }
