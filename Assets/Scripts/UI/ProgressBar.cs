@@ -6,7 +6,7 @@ public class ProgressBar : MonoBehaviour
 {
     private PlayerController player;
     [SerializeField]
-    private RectTransform playerUI;
+    private RectTransform playerUI, enemyUI;
     private PanelManager pm;
 
     private void Start()

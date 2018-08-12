@@ -84,7 +84,7 @@ public class Character
             "AAAAAAAAAAAAAAAAAAAAAAH, oh, it’s a photon, nevermind.",
             "I LOST MY PHONE !!",
             "*glares at infinite endless space around, anxious*",
-        }, Resources.Load<RuntimeAnimatorController>("Fearful/HangingState"), Resources.Load<Sprite>("Fearfull/SitDown"), Sexe.Male,
+        }, Resources.Load<RuntimeAnimatorController>("Fearful/HangingState"), Resources.Load<Sprite>("Fearful/SitDown"), Sexe.Male,
         "");
 
     public static Character LittleSister = new Character("Tanya Dezora",
