@@ -4,7 +4,7 @@ public class Character
 {
     private Character(string name, string description1,
         float weight, int height, int age, string entryLine, string exitLine, string[] lines,
-        RuntimeAnimatorController hanging, Sprite sitDown, Sexe sexe)
+        RuntimeAnimatorController hanging, Sprite sitDown, Sexe sexe, string winAlone)
     {
         this.name = name;
         this.description1 = description1;
@@ -18,6 +18,7 @@ public class Character
         this.sitDown = sitDown;
         nbSpecials = 0;
         this.sexe = sexe;
+        this.winAlone = winAlone;
     }
 
     public enum Sexe
@@ -38,6 +39,7 @@ public class Character
     public readonly Sprite sitDown;
     public int nbSpecials;
     public Sexe sexe;
+    public string winAlone;
 
     public const float WeightMultiplicator = 0.33f;
 
@@ -52,7 +54,8 @@ public class Character
             "When we will be out of this, I want a cup of tea.",
             "You... won't throw me away, will you ?",
             "You really run fast, that remind me when we were at primary school ..."
-        }, Resources.Load<RuntimeAnimatorController>("Tsundere/HangingState"), Resources.Load<Sprite>("Tsundere/SitDown"), Sexe.Female);
+        }, Resources.Load<RuntimeAnimatorController>("Tsundere/HangingState"), Resources.Load<Sprite>("Tsundere/SitDown"), Sexe.Female,
+        "You ended up alone with your childhood tsundere friend, Hanashi Tsubaka. You didn't manage to create a new world but at least you could now die peacefully as she confessed to you.");
 
     public static Character drunkMan = new Character("Jhon Joe Jimbob",
         "Lost his parents at age 14 and found resilience in alcohol, will probably lose his life too now, that’s sad, but he is fat, so it’s funny.",
@@ -65,7 +68,8 @@ public class Character
             "Hello cutie, wanna see my giant beast ? ^^",
             "I think he’s following us, not sure, I might be stoned too.",
             "You know, I always thought that my left toe was bigger than my right one hehe."
-        }, Resources.Load<RuntimeAnimatorController>("DrunkMan/HangingState"), Resources.Load<Sprite>("DrunkMan/SitDown"), Sexe.Male);
+        }, Resources.Load<RuntimeAnimatorController>("DrunkMan/HangingState"), Resources.Load<Sprite>("DrunkMan/SitDown"), Sexe.Male,
+        "");
 
     public static Character fearfull = new Character("Edmund Derp",
         "Is afraid of strange-shaped clouds, likes watch TV with his pet-hamster.",
@@ -79,7 +83,8 @@ public class Character
             "AAAAAAAAAAAAAAAAAAAAAAH, oh, it’s a photon, nevermind.",
             "I LOST MY PHONE !!",
             "*glares at infinite endless space around, anxious*",
-        }, Resources.Load<RuntimeAnimatorController>("Fearfull/HangingState"), Resources.Load<Sprite>("Fearfull/SitDown"), Sexe.Male);
+        }, Resources.Load<RuntimeAnimatorController>("Fearfull/HangingState"), Resources.Load<Sprite>("Fearfull/SitDown"), Sexe.Male,
+        "");
 
     public static Character LittleSister = new Character("Tanya Dezora",
         "Your little sister. Wait… What is she doing here ?",
@@ -93,7 +98,8 @@ public class Character
             "I feel safe as long I’m with you!",
             "I think I peed myself...",
             "What is this big scary thing behind ?",
-        }, Resources.Load<RuntimeAnimatorController>("LittleSister/HangingState"), Resources.Load<Sprite>("LittleSister/SitDown"), Sexe.Female);
+        }, Resources.Load<RuntimeAnimatorController>("LittleSister/HangingState"), Resources.Load<Sprite>("LittleSister/SitDown"), Sexe.Female,
+        "");
 
     public static Character SportGirl = new Character("Rikka Naru",
         "When she was young, Rikka was always sick and stick to bed. Now that she can run around, well, she run around.",
@@ -107,7 +113,8 @@ public class Character
             "Wooho!!",
             "What is this thing behind ? Does it want to fight ?",
             "Next time, you go on my shoulders!",
-        }, Resources.Load<RuntimeAnimatorController>("SportGirl/HangingState"), Resources.Load<Sprite>("SportGirl/SitDown"), Sexe.Female);
+        }, Resources.Load<RuntimeAnimatorController>("SportGirl/HangingState"), Resources.Load<Sprite>("SportGirl/SitDown"), Sexe.Female,
+        "");
 
     public static Character Narcissistic = new Character("Sheldon Tonnelier",
         "Geek, gifted, have a paladin lvl 110 on World of Derpass.",
@@ -121,7 +128,8 @@ public class Character
             "Can someone cry of stupidity ? Can he understand that he is stupid ?",
             "You suffer ? Does it affect me ? No ? Then suffer in silence.",
             "A single use of Healing Symbol would save us all, but … hm, yes that’s complicated.",
-        }, Resources.Load<RuntimeAnimatorController>("Narcissistic/HangingState"), Resources.Load<Sprite>("Narcissistic/SitDown"), Sexe.Male);
+        }, Resources.Load<RuntimeAnimatorController>("Narcissistic/HangingState"), Resources.Load<Sprite>("Narcissistic/SitDown"), Sexe.Male,
+        "");
 
     public static Character DeadBody = new Character("Ded",
         "Judging by the odor and his eye that rolled away, this person looks dead",
@@ -135,7 +143,8 @@ public class Character
             "*Oh his eye moved! Nevermind, just a worm*",
             "...",
             "...",
-        }, Resources.Load<RuntimeAnimatorController>("DeadBody/HangingState"), Resources.Load<Sprite>("DeadBody/SitDown"), Sexe.Male);
+        }, Resources.Load<RuntimeAnimatorController>("DeadBody/HangingState"), Resources.Load<Sprite>("DeadBody/SitDown"), Sexe.Male,
+        "");
 
     public static Character Medic = new Character("Albrecht Ludwing",
         "Does not care about life, but will never run out of syringes. Who needs a heart anyway ? You ? Ahahahahah ... No.",
@@ -149,7 +158,8 @@ public class Character
             "Oops! That was not medicine!",
             "Medic here, Medic there, can’t you stop crying, you just lost a leg ...",
             "You know, that’s not really good for your back.",
-        }, Resources.Load<RuntimeAnimatorController>("Medic/HangingState"), Resources.Load<Sprite>("Medic/SitDown"), Sexe.Male);
+        }, Resources.Load<RuntimeAnimatorController>("Medic/HangingState"), Resources.Load<Sprite>("Medic/SitDown"), Sexe.Male,
+        "");
 
     public static Character Epichan = new Character("Epi-chan",
         "Know a good school you should probably join for only *cough* 8000€ by years",
@@ -163,7 +173,8 @@ public class Character
             "You need help with something ? ... Just look on the internet or man google.",
             "If you don’t have enough money, you can also borrow some to banks. The we will be glad to borrow yours.",
             "So you will join our school ? At least do it for me, please.",
-        }, Resources.Load<RuntimeAnimatorController>("Epichan/HangingState"), Resources.Load<Sprite>("Epichan/SitDown"), Sexe.Female);
+        }, Resources.Load<RuntimeAnimatorController>("Epichan/HangingState"), Resources.Load<Sprite>("Epichan/SitDown"), Sexe.Female,
+        "");
 
     public static Character ConfusedGuy = new Character("Dimitry Delabar",
         "Always have his head on the clouds, he lost countless jobs because of that.",
@@ -177,7 +188,8 @@ public class Character
             "Oh, stop a bit, I saw a beautiful mushroom",
             "Can we take a break ? I need to pee",
             "Isn’t the weather lovely today ?",
-        }, Resources.Load<RuntimeAnimatorController>("ConfusedGuy/HangingState"), Resources.Load<Sprite>("ConfusedGuy/SitDown"), Sexe.Male);
+        }, Resources.Load<RuntimeAnimatorController>("ConfusedGuy/HangingState"), Resources.Load<Sprite>("ConfusedGuy/SitDown"), Sexe.Male,
+        "");
 
     public static Character Mechanic = new Character("Raoul Dozzo",
         "Loves cars and custom handmade stuff.",
@@ -191,7 +203,8 @@ public class Character
             "Imagine if we had a car, or two cars, two cars sounds better.",
             "I once made her start with the finger if you know what I mean.",
             "Smells like piss",
-        }, Resources.Load<RuntimeAnimatorController>("Mechanic/HangingState"), Resources.Load<Sprite>("Mechanic/SitDown"), Sexe.Male);
+        }, Resources.Load<RuntimeAnimatorController>("Mechanic/HangingState"), Resources.Load<Sprite>("Mechanic/SitDown"), Sexe.Male,
+        "");
 
     public static Character LostChild = new Character("Aruna Way",
         "Beaten up by her parents for a long time. So ran away from home, only one of her family that is still alive.",
@@ -205,7 +218,8 @@ public class Character
             "My dad used to have a thing like this too, not great memories of it tho.",
             "Could I stay with you after that ?",
             "I don’t know how to thank you ...",
-        }, Resources.Load<RuntimeAnimatorController>("LostChild/HangingState"), Resources.Load<Sprite>("LostChild/SitDown"), Sexe.Female);
+        }, Resources.Load<RuntimeAnimatorController>("LostChild/HangingState"), Resources.Load<Sprite>("LostChild/SitDown"), Sexe.Female,
+        "");
 
     public static Character Vocaloid = new Character("Pina",
         "Vocaloid singer since she was born, she know nothing else than music.",
@@ -219,7 +233,8 @@ public class Character
             "Someone once told me vocaloid are lame, what do you think of it ?",
             "You threw a lot of people away… I’m kind of glad you’re evil too.",
             "I sometimes feel like I’m lifeless but that doesn’t really bother me",
-        }, Resources.Load<RuntimeAnimatorController>("Vocaloid/HangingState"), Resources.Load<Sprite>("Vocaloid/SitDown"), Sexe.Female);
+        }, Resources.Load<RuntimeAnimatorController>("Vocaloid/HangingState"), Resources.Load<Sprite>("Vocaloid/SitDown"), Sexe.Female,
+        "");
 
     public static Character[] basicCharacters = new Character[] {
         tsundere, drunkMan, fearfull, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Epichan, Mechanic, LostChild, Vocaloid
