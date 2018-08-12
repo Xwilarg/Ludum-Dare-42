@@ -5333,5 +5333,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b4313a3cb2c00478d997310189832e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemy: {fileID: 91670581}
   playerUI: {fileID: 999373384}
   enemyUI: {fileID: 1727218063}
