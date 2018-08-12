@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     private GameObject gameOverPanel;
     [SerializeField]
     private Image[] images;
+    [SerializeField]
+    private Text scoreText;
+    public float score { set; get; }
     private int index;
     private bool inTrap;
 
@@ -25,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        score = 0f;
         Time.timeScale = 1f;
         rb = GetComponent<Rigidbody2D>();
         isJumping = false;
@@ -42,10 +46,13 @@ public class PlayerController : MonoBehaviour
             {
                 Time.timeScale = 0f;
                 gameOverPanel.SetActive(true);
+                scoreText.text = "Score: " + score;
             }
             return;
         }
         anim.speed = speed / 300f;
+        score += speed * Time.deltaTime;
+        scoreText.text = "Score: " + score;
         if (isJumping && transform.position.y <= jumpPos.y)
         {
             gameObject.layer = 0;
@@ -82,11 +89,13 @@ public class PlayerController : MonoBehaviour
         if (index == images.Length - 1)
         {
             images[index].color = Color.white;
+            score -= 30000f;
             Loose();
         }
         else
         {
             images[index].color = Color.white;
+            score -= 30000f;
             index++;
         }
     }

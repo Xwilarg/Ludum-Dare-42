@@ -24,6 +24,7 @@ public class CharacterCollector : MonoBehaviour
             collision.transform.position = transform.position + new Vector3(0f, .8f) * (1 + Pm.PanelList.Count);
             collision.GetComponent<SpriteRenderer>().sortingOrder = 999 - Pm.PanelList.Count;
             MyCharacter c = collision.GetComponent<MyCharacter>();
+            master.score += c.me.weight / Character.WeightMultiplicator * 100f;
             collision.GetComponent<SpriteRenderer>().sprite = c.me.sitDown;
             Pm.AddPileCharacter(c);
             master.speed -= c.me.weight;

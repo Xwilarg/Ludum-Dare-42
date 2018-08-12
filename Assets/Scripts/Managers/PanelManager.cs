@@ -51,6 +51,7 @@ public class PanelManager : MonoBehaviour
         MTuple<GameObject, MyCharacter> tof = PanelList.Find(x => x.a == obj);
         tof.a.GetComponent<CharacterPanelDelete>().StartTimer(tof.b.me.exitLine);
         yield return new WaitForSeconds(2);
+        PlayerCntl.score -= tof.b.me.weight / Character.WeightMultiplicator * 100f;
         PanelList.Remove(tof);
         tof.a.SetActive(false);
         tof.b.gameObject.transform.parent = null;
