@@ -6,9 +6,12 @@ public class SummonMini : MonoBehaviour
 {
     [SerializeField]
     private GameObject MiniPrefab;
+    [SerializeField]
+    public PlayerController Pc;
     private float delta;
 
 	void Start () {
+        Pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         delta = Time.time;		
 	}
 	

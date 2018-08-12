@@ -52,3 +52,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MiniPrefab: {fileID: 1143669042851378, guid: 72d7673d0b954ac408232daaccdfe87f, type: 2}
+  Pc: {fileID: 0}

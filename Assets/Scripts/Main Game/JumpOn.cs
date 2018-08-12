@@ -9,7 +9,7 @@ public class JumpOn : MonoBehaviour {
     private Transform target;
    
     private void Start () {
-        Pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        Pc = transform.parent.gameObject.GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         target = Pc.transform;
         JumpOnCharacter();
