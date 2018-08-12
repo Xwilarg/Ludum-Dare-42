@@ -75,7 +75,7 @@ public class Character
     public static Character fearful = new Character("Edmund Derp",
         "Is afraid of strange-shaped clouds, likes watch TV with his pet-hamster.",
         58f, 169, 21,
-        "WERE ARE WE !?",
+        "WHERE ARE WE !?",
         "WHY, WHY DOES EVERYONE LET’S ME DOWN !!!??!",
         new string[]
         {
