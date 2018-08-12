@@ -46,7 +46,7 @@ public class Character
 
     public static Character tsundere = new Character("Hanashi Tsubaka",
         "Your childhood friend that definitly doesn't like you, you idiot!\nShe got rejected many times at medium school so she now is afraid to confess.",
-        55f, 167, 21,
+        55f, 167, 21, // IMC: 19.7
         "Oh, it's you... I mean, you're late!",
         "If you think I'm a burden...",
         new string[] {
@@ -60,7 +60,7 @@ public class Character
 
     public static Character drunkMan = new Character("Jhon Joe Jimbob",
         "Lost his parents at age 14 and found resilience in alcohol, will probably lose his life too now, that’s sad, but he is fat, so it’s funny.",
-        84f, 178, 37,
+        84f, 178, 37, // IMC: 26.5
         "Damn, it sWaYs!",
         "Leave me here, I'll throw up.",
         new string[] {
@@ -74,7 +74,7 @@ public class Character
 
     public static Character fearful = new Character("Edmund Derp",
         "Is afraid of strange-shaped clouds, likes watch TV with his pet-hamster.",
-        58f, 169, 21,
+        58f, 169, 21, // IMC: 20.3
         "WHERE ARE WE !?",
         "WHY, WHY DOES EVERYONE LET’S ME DOWN !!!??!",
         new string[]
@@ -89,7 +89,7 @@ public class Character
 
     public static Character LittleSister = new Character("Tanya Dezora",
         "Your little sister. Wait… What is she doing here ?",
-        20f, 110, 6,
+        24f, 110, 6, // IMC: 19.8
         "Oh, big brother! Nice to see you!",
         "No no no, don’t leave me!",
         new string[]
@@ -104,7 +104,7 @@ public class Character
 
     public static Character SportGirl = new Character("Rikka Naru",
         "When she was young, Rikka was always sick and stick to bed. Now that she can run around, well, she run around.",
-        63f, 173, 21,
+        63f, 173, 17, // IMC: 21
         "Yeah! Free ride!",
         "I’m flying!",
         new string[]
@@ -119,7 +119,7 @@ public class Character
 
     public static Character Narcissistic = new Character("Sheldon Tonnelier",
         "Geek, gifted, have a paladin lvl 110 on World of Derpass.",
-        62f, 181, 38,
+        62f, 181, 38, // IMC: 18.9
         "Huh, I could’ve done it myself insect.",
         "I’m not falling to my death, I’m studying gravity until death.",
         new string[]
@@ -134,7 +134,7 @@ public class Character
 
     public static Character DeadBody = new Character("Ded",
         "Judging by the odor and his eye that rolled away, this person looks dead",
-        86f, 179, 653,
+        86f, 179, 653, // IMC: 26.8
         "*Oops, he lost an arm*",
         "*poof*",
         new string[]
@@ -149,7 +149,7 @@ public class Character
 
     public static Character Medic = new Character("Albrecht Ludwing",
         "Does not care about life, but will never run out of syringes. Who needs a heart anyway ? You ? Ahahahahah ... No.",
-        79f, 192, 43,
+        79f, 192, 43, // IMC: 21.4
         "Oktoberfest !",
         "Auf wiedersehen... dummkopf!",
         new string[]
@@ -164,7 +164,7 @@ public class Character
 
     public static Character Epichan = new Character("Epi-chan",
         "Know a good school you should probably join for only *cough* 8000€ by years",
-        65f, 168, 18,
+        65f, 168, 18, // IMC: 23
         "Oh, hi, I know a very good school you should try, we have a very interesting pedagogy and it’s not that expensive you know.",
         "Ah, wait, you can pay in 8 times!",
         new string[]
@@ -179,7 +179,7 @@ public class Character
 
     public static Character ConfusedGuy = new Character("Dimitry Delabar",
         "Always have his head on the clouds, he lost countless jobs because of that.",
-        79f, 180, 34,
+        79f, 180, 34, // IMC: 24.4
         "Hello there.",
         "Oh, staaars! Everywhere ...",
         new string[]
@@ -194,7 +194,7 @@ public class Character
 
     public static Character Mechanic = new Character("Raoul Dozzo",
         "Loves cars and custom handmade stuff.",
-        117f, 174, 34,
+        117f, 174, 34, // IMC: 38.6
         "Hehe, how’s it going lads ?",
         "You lil *?#*+£$",
         new string[]
@@ -209,7 +209,7 @@ public class Character
 
     public static Character LostChild = new Character("Aruna Way",
         "Beaten up by her parents for a long time. So ran away from home, only one of her family that is still alive.",
-        36f, 144, 11,
+        38f, 144, 11, // IMC: 17.4
         "You … you are not a bad guy ?",
         "I thought we were friends … :’(",
         new string[]
