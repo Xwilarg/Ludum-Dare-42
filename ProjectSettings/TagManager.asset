@@ -9,6 +9,7 @@ TagManager:
   - GameManager
   - ProgressBar
   - Beast
+  - Fences
   layers:
   - Default
   - TransparentFX
