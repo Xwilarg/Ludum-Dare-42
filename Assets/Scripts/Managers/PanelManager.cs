@@ -64,6 +64,7 @@ public class PanelManager : MonoBehaviour
         {
             PanelList[i].b.transform.position = PlayerCntlObj.transform.position + new Vector3(0f, .8f) * (1 + i);
             PanelList[i].a.transform.position = new Vector3(i * 100 + 30, PanelList[i].a.transform.position.y);
+            PanelList[i].b.GetComponent<SpriteRenderer>().sortingOrder = 999 - i;
         }
         PlayerCntl.speed += tof.b.me.weight;
     }
