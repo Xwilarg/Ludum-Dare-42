@@ -10,6 +10,7 @@ TagManager:
   - ProgressBar
   - Beast
   - Fences
+  - Almanac
   layers:
   - Default
   - TransparentFX

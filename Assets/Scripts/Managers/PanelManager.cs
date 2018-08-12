@@ -33,6 +33,19 @@ public class PanelManager : MonoBehaviour
         PlayerCntl = PlayerCntlObj.GetComponent<PlayerController>();
     }
 
+    private readonly KeyCode[] AlphaKeys = new KeyCode[] {
+        KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6, KeyCode.Alpha7, KeyCode.Alpha8, KeyCode.Alpha9, KeyCode.Alpha0
+    };
+
+    private void Update()
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            if (Input.GetKeyDown(AlphaKeys[i]) && PanelList.Count > i)
+                StartCoroutine(DelPileCharacter(PanelList[i].a));
+        }
+    }
+
     public void AddPileCharacter(MyCharacter NetCharacter)
     {
         GameObject go = Instantiate(CharacterPanelPrefab, new Vector3(0, 0, 0), Quaternion.identity);
