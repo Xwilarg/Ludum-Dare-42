@@ -400,6 +400,7 @@ GameObject:
   - component: {fileID: 185419516}
   - component: {fileID: 185419519}
   - component: {fileID: 185419518}
+  - component: {fileID: 185419520}
   m_Layer: 10
   m_Name: FenceUp
   m_TagString: Fences
@@ -523,6 +524,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &185419520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185419514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2fc003a2616c0418ab78b5b5ba016f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &249762223
 Prefab:
   m_ObjectHideFlags: 0
@@ -1241,6 +1253,7 @@ GameObject:
   - component: {fileID: 788558939}
   - component: {fileID: 788558942}
   - component: {fileID: 788558941}
+  - component: {fileID: 788558943}
   m_Layer: 10
   m_Name: FenceDown
   m_TagString: Fences
@@ -1364,6 +1377,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &788558943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 788558937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2fc003a2616c0418ab78b5b5ba016f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &825285786
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,6 +2011,7 @@ GameObject:
   - component: {fileID: 1072086306}
   - component: {fileID: 1072086305}
   - component: {fileID: 1072086304}
+  - component: {fileID: 1072086308}
   m_Layer: 10
   m_Name: FenceDown2
   m_TagString: Fences
@@ -2110,6 +2135,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1072086308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1072086302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2fc003a2616c0418ab78b5b5ba016f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1104196161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1762862850011154, guid: 2791d6a778d914b4cb2cf966c89848cf,
@@ -3250,6 +3286,7 @@ GameObject:
   - component: {fileID: 1543248828}
   - component: {fileID: 1543248827}
   - component: {fileID: 1543248826}
+  - component: {fileID: 1543248830}
   m_Layer: 10
   m_Name: FenceUp2
   m_TagString: Fences
@@ -3373,6 +3410,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1543248830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1543248824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa2fc003a2616c0418ab78b5b5ba016f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1593743356 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1203283175186868, guid: 8bfe819db43e72644bfb743763caa33d,
