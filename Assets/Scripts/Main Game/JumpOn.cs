@@ -22,6 +22,8 @@ public class JumpOn : MonoBehaviour {
             rb.gravityScale = 0f;
             rb.velocity = new Vector2(rb.velocity.x, 0f);
         }
+        if (transform.position.x > 30)
+            Destroy(gameObject);
     }
 
     private void JumpOnCharacter()
