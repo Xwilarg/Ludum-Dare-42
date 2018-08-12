@@ -1,6 +1,6 @@
 ﻿public class Weapon
 {
-    public Weapon(string name, float damage, WeaponType type, float deviation, int fireRate, int shellNb)
+    public Weapon(string name, float damage, WeaponType type, float deviation, float fireRate, int shellNb)
     {
         this.name = name;
         this.damage = damage;
@@ -19,15 +19,15 @@
     public readonly string name;
     public readonly float damage;
     public readonly WeaponType type;
-    public readonly float deviation; // degrees
-    public readonly int fireRate; // ms
+    public readonly float deviation; // / 1
+    public readonly float fireRate; // s
     public readonly int shellNb;
 
-    public static Weapon Gun = new Weapon("Gun", 10f, WeaponType.Raycast, 10, 1000, 1);
+    public static Weapon Gun = new Weapon("Gun", 10f, WeaponType.Raycast, .1f, 1, 1);
 
-    public static Weapon HeavyMachineGun = new Weapon("Heavy Machinegun", 2f, WeaponType.Raycast, 30, 10, 1);
+    public static Weapon HeavyMachineGun = new Weapon("Heavy Machinegun", 2f, WeaponType.Raycast, 1f, 0.01f, 1);
 
-    public static Weapon Shotgun = new Weapon("Shotgun", 2f, WeaponType.Raycast, 20, 1500, 20);
+    public static Weapon Shotgun = new Weapon("Shotgun", 2f, WeaponType.Raycast, .8f, 1.5f, 20);
 
-    public static Weapon[] Weapons = new Weapon[] { Gun, HeavyMachineGun, Shotgun };
+    public static Weapon[] Weapons = new Weapon[] { HeavyMachineGun };
 }

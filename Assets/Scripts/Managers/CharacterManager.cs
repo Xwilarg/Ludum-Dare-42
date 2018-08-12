@@ -30,10 +30,13 @@ public class CharacterManager : MonoBehaviour
                 return;
             GameObject go = Instantiate(characPrefab, new Vector2(15f, Random.Range(3f, 4f)), Quaternion.identity);
             MyCharacter charac = go.GetComponent<MyCharacter>();
-            if (Random.Range(0, 5) == 0)
+            if (Random.Range(0, 10) == 0)
                 charac.me = Character.basicCharacters[Random.Range(0, Character.basicCharacters.Count)];
             else
+            {
                 charac.me = Character.clone;
+                charac.me.weapon = Weapon.Weapons[Random.Range(0, Weapon.Weapons.Length)];
+            }
             Character.basicCharacters.Remove(charac.me);
             go.GetComponent<Animator>().runtimeAnimatorController = charac.me.hanging;
             charac.SetDescriptionPanel(descriptionPanel, nameText, description1, image);

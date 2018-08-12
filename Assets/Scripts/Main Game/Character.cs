@@ -20,6 +20,7 @@ public class Character
         nbSpecials = 0;
         this.sexe = sexe;
         this.winAlone = winAlone;
+        this.weapon = null;
     }
 
     public enum Sexe
@@ -39,8 +40,9 @@ public class Character
     public readonly RuntimeAnimatorController hanging;
     public readonly Sprite sitDown;
     public int nbSpecials;
-    public Sexe sexe;
-    public string winAlone;
+    public readonly Sexe sexe;
+    public readonly string winAlone;
+    public Weapon weapon;
 
     public const float WeightMultiplicator = 0.33f;
 

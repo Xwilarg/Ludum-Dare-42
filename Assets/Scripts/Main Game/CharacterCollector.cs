@@ -23,6 +23,7 @@ public class CharacterCollector : MonoBehaviour
             collision.transform.parent = transform;
             collision.transform.position = transform.position + new Vector3(0f, .8f) * (1 + Pm.PanelList.Count);
             MyCharacter c = collision.GetComponent<MyCharacter>();
+            c.taken = true;
             master.score += c.me.weight / Character.WeightMultiplicator * 100f;
             collision.GetComponent<SpriteRenderer>().sprite = c.me.sitDown;
             Pm.AddPileCharacter(c);

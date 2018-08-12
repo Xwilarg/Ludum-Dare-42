@@ -585,6 +585,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1.472
       objectReference: {fileID: 0}
+    - target: {fileID: 1455043577088824, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
   m_IsPrefabAsset: 0
@@ -608,7 +612,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &257476708
 Transform:
   m_ObjectHideFlags: 0
@@ -1139,6 +1143,10 @@ Prefab:
     - target: {fileID: 4680740629044444, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455043577088824, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
@@ -2146,7 +2154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1085851674
 Transform:
   m_ObjectHideFlags: 0
@@ -2241,6 +2249,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1.472
       objectReference: {fileID: 0}
+    - target: {fileID: 1455043577088824, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
   m_IsPrefabAsset: 0
@@ -2300,6 +2312,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1.472
       objectReference: {fileID: 0}
+    - target: {fileID: 1455043577088824, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
   m_IsPrefabAsset: 0
@@ -2358,6 +2374,10 @@ Prefab:
     - target: {fileID: 4680740629044444, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.472
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455043577088824, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
@@ -2717,7 +2737,7 @@ GameObject:
   - component: {fileID: 1205362950}
   - component: {fileID: 1205362952}
   - component: {fileID: 1205362951}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4097,6 +4117,10 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 1.472
       objectReference: {fileID: 0}
+    - target: {fileID: 1455043577088824, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
   m_IsPrefabAsset: 0
@@ -4190,6 +4214,10 @@ Prefab:
     - target: {fileID: 4680740629044444, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
       propertyPath: m_LocalScale.x
       value: 1.472
+      objectReference: {fileID: 0}
+    - target: {fileID: 1455043577088824, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e549d5b7ecc9b9944b1c811108f11eda, type: 2}
