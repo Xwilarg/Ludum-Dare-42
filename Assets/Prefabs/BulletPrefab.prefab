@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4273266961967272}
   - component: {fileID: 212356018110242594}
   - component: {fileID: 50573907936502760}
+  - component: {fileID: 114628884702304430}
   m_Layer: 0
   m_Name: BulletPrefab
   m_TagString: Projectile
@@ -61,6 +62,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &114628884702304430
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1987567542050834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10c0314c8de20f642bbec150aad30fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212356018110242594
 SpriteRenderer:
   m_ObjectHideFlags: 1
