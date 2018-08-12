@@ -21,10 +21,10 @@ GameObject:
   - component: {fileID: 4363574434748868}
   - component: {fileID: 212667839361372252}
   - component: {fileID: 61854363465614200}
-  - component: {fileID: 114649972874651930}
   - component: {fileID: 114062990729034618}
   - component: {fileID: 50626103859886404}
   - component: {fileID: 95561324015407898}
+  - component: {fileID: 114172263730930026}
   m_Layer: 0
   m_Name: AI
   m_TagString: Character
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dbe55470c39e98429395b75dc99cbdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114649972874651930
+--- !u!114 &114172263730930026
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,10 +157,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1404340795655378}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b483e54576fb3874a8f0d02b8de43154, type: 3}
+  m_Script: {fileID: 11500000, guid: f49f466064fe8c1489ecf7a73967e578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  invert: 0
+  Pc: {fileID: 0}
 --- !u!212 &212667839361372252
 SpriteRenderer:
   m_ObjectHideFlags: 1

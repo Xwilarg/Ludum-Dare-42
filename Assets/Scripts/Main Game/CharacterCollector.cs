@@ -16,7 +16,7 @@ public class CharacterCollector : MonoBehaviour
     {
         if (collision.CompareTag("Character"))
         {
-            collision.GetComponent<BackgroundScroll>().enabled = false;
+            collision.GetComponent<FenceScroll>().enabled = false;
             collision.transform.GetChild(0).gameObject.SetActive(false);
             collision.GetComponent<BoxCollider2D>().enabled = false;
             collision.GetComponent<Animator>().enabled = false;
