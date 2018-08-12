@@ -29,5 +29,5 @@
 
     public static Weapon Shotgun = new Weapon("Shotgun", 2f, WeaponType.Raycast, .8f, 1.5f, 20);
 
-    public static Weapon[] Weapons = new Weapon[] { HeavyMachineGun };
+    public static Weapon[] Weapons = new Weapon[] { Gun };
 }
