@@ -208,10 +208,10 @@ public class Character
         }, Resources.Load<RuntimeAnimatorController>("LostChild/HangingState"), Resources.Load<Sprite>("LostChild/SitDown"), Sexe.Female);
 
     public static Character Vocaloid = new Character("Pina",
-        "",
+        "Vocaloid singer since she was born, she know nothing else than music.",
         0f, 176, 16,
-        "",
-        "",
+        "Hey it's me, Pina!",
+        "Holograms can't die",
         new string[]
         {
             "Did you see Matsuri ?",
