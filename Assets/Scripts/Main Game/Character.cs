@@ -44,6 +44,18 @@ public class Character
 
     public const float WeightMultiplicator = 0.33f;
 
+    public static Character clone = new Character("Clone",
+        "Your childhood friend that definitly doesn't like you, you idiot!\nShe got rejected many times at medium school so she now is afraid to confess.",
+        80f, 175, 23,
+        "At your order.",
+        "Fighting for you was an honor.",
+        new string[] {
+            "Enemies don't stand a chance.",
+            "Aiming at target.",
+            "For the earth!"
+        }, Resources.Load<RuntimeAnimatorController>("Clone/HangingState"), Resources.Load<Sprite>("Clone/SitDown"), Sexe.Female,
+        "");
+
     public static Character tsundere = new Character("Hanashi Tsubaka",
         "Your childhood friend that definitly doesn't like you, you idiot!\nShe got rejected many times at medium school so she now is afraid to confess.",
         55f, 167, 21, // IMC: 19.7
@@ -238,6 +250,6 @@ public class Character
         "");
 
     public static List<Character> basicCharacters = new List<Character>() {
-        tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Epichan, Mechanic, LostChild, Vocaloid
+        tsundere, drunkMan, fearful, LittleSister, SportGirl
     };
 }
