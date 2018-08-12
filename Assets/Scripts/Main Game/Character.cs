@@ -72,7 +72,7 @@ public class Character
         }, Resources.Load<RuntimeAnimatorController>("DrunkMan/HangingState"), Resources.Load<Sprite>("DrunkMan/SitDown"), Sexe.Male,
         "");
 
-    public static Character fearfull = new Character("Edmund Derp",
+    public static Character fearful = new Character("Edmund Derp",
         "Is afraid of strange-shaped clouds, likes watch TV with his pet-hamster.",
         58f, 169, 21,
         "WERE ARE WE !?",
@@ -84,7 +84,7 @@ public class Character
             "AAAAAAAAAAAAAAAAAAAAAAH, oh, it’s a photon, nevermind.",
             "I LOST MY PHONE !!",
             "*glares at infinite endless space around, anxious*",
-        }, Resources.Load<RuntimeAnimatorController>("Fearfull/HangingState"), Resources.Load<Sprite>("Fearfull/SitDown"), Sexe.Male,
+        }, Resources.Load<RuntimeAnimatorController>("Fearful/HangingState"), Resources.Load<Sprite>("Fearfull/SitDown"), Sexe.Male,
         "");
 
     public static Character LittleSister = new Character("Tanya Dezora",
@@ -238,6 +238,6 @@ public class Character
         "");
 
     public static List<Character> basicCharacters = new List<Character>() {
-        tsundere, drunkMan, fearfull, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Epichan, Mechanic, LostChild, Vocaloid
+        tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Epichan, Mechanic, LostChild, Vocaloid
     };
 }

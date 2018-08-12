@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private Image[] images;
     [SerializeField]
     private Text scoreText;
+    [SerializeField]
+    private GameObject descriptionPanel;
     public float score { set; get; }
     private int index;
     private bool inTrap;
@@ -40,6 +42,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            descriptionPanel.SetActive(false);
         if (didLost)
         {
             if (!gameOverPanel.activeInHierarchy)
