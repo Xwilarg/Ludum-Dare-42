@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
         anim.speed = speed / 300f;
         if (isJumping && transform.position.y <= jumpPos.y)
         {
+            gameObject.layer = 0;
             isJumping = false;
             rb.gravityScale = 0f;
         }
@@ -54,6 +55,7 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")) * Time.deltaTime * speed - new Vector2(100f * Time.deltaTime, 0f);
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                gameObject.layer = 11;
                 isJumping = true;
                 jumpPos = transform.position;
                 rb.gravityScale = 1f;
