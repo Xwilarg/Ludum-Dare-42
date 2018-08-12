@@ -9,6 +9,7 @@ public class WinRecap : MonoBehaviour
 
     private void Start()
     {
+        text = GetComponentInChildren<Text>();
         win = GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinCharacters>();
         text.text = "You sucessfully managed to escape the end of everything by going in a wormhole, but now everything is to rebuild..." + System.Environment.NewLine + System.Environment.NewLine;
         if (win.survivors.Count == 0)
