@@ -61,6 +61,7 @@ public class PanelManager : MonoBehaviour
 
         for (int i = 0; i < PanelList.Count; ++i)
         {
+            PanelList[i].b.transform.position = PlayerCntlObj.transform.position + new Vector3(0f, .8f) * (1 + i);
             PanelList[i].a.transform.position = new Vector3(i * 100 + 30, PanelList[i].a.transform.position.y);
         }
         PlayerCntl.speed += tof.b.me.weight;
