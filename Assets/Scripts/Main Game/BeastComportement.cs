@@ -6,7 +6,6 @@ public class BeastComportement : MonoBehaviour
 {
     [SerializeField]
     private GameObject Player;
-    [SerializeField]
     private HealthManager hm;
     
     private float maxCapacitor = 18;
