@@ -12,6 +12,7 @@ TagManager:
   - Fences
   - Almanac
   - Projectile
+  - Puchi
   layers:
   - Default
   - TransparentFX
