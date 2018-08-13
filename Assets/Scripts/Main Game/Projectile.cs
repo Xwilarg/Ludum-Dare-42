@@ -4,7 +4,7 @@
 public class Projectile : MonoBehaviour
 {
     [SerializeField]
-    private Sprite explosion;
+    private GameObject explosionPrefab;
     private Rigidbody2D rb;
     private BeastComportement Bc;
     private bool exploded = false;
@@ -31,8 +31,9 @@ public class Projectile : MonoBehaviour
                 beast = beast.transform.parent.gameObject;
             Bc = beast.GetComponent<BeastComportement>();
             Bc.TakeDamage(10);
-            GetComponent<SpriteRenderer>().sprite = explosion;
-            Destroy(this, 1f);
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            Destroy(explosion, 1);
+            Destroy(this, 1);
         }
     }
 }
