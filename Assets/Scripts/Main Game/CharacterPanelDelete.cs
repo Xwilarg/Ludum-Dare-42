@@ -24,6 +24,7 @@ public class CharacterPanelDelete : MonoBehaviour
     private PlayerController pc;
     private float speTimer;
     private SummonMini Sm;
+    private Image i;
 
     private void Start()
     {
@@ -42,6 +43,7 @@ public class CharacterPanelDelete : MonoBehaviour
         if (me.me.classe == Character.Classe.Clone)
             cooldownPanel.gameObject.SetActive(false);
         speTimer = -1.5f;
+        i = transform.GetChild(0).GetComponent<Image>();
     }
 
     private void ResetSpeak()
@@ -66,12 +68,12 @@ public class CharacterPanelDelete : MonoBehaviour
 
     private void setWhite()
     {
-        gameObject.GetComponent<Image>().color = Color.white;
+        i.color = Color.white;
     }
 
     private void setGreen()
     {
-        gameObject.GetComponent<Image>().color = Color.green;
+        i.color = Color.green;
     }
 
     private void Update()
