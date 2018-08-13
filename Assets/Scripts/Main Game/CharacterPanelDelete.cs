@@ -76,6 +76,8 @@ public class CharacterPanelDelete : MonoBehaviour
         i.color = Color.green;
     }
 
+    private bool resetCd = false;
+
     private void Update()
     {
         if ((me.me.classe == Character.Classe.Sport && pc.perso != PlayerController.Perso.Rinna)
@@ -181,6 +183,8 @@ public class CharacterPanelDelete : MonoBehaviour
         if (speTimer < 0f && speTimer > -1f)
         {
             RemoveCap();
+            if (resetCd == true)
+                ResetCooldown();
             speTimer = -1.5f;
         }
         else if (me.me.cooldown != 0f)
@@ -205,34 +209,34 @@ public class CharacterPanelDelete : MonoBehaviour
         if (me.me.classe == Character.Classe.Fearful)
         {
             pc.speed -= 20f;
-            ResetCooldown();
+            resetCd = true;
         }
         else if (me.me.classe == Character.Classe.Drunk)
         {
             pc.speed += 10f;
-            ResetCooldown();
+            resetCd = true;
         }
         else if (me.me.classe == Character.Classe.Narcissistic)
         {
             Tm.refTimer = new Vector2(0.5f, 2f);
-            ResetCooldown();
+            resetCd = true;
         }
         else if (me.me.classe == Character.Classe.Lost)
         {
             Sm.spawning = true;
             Tm.spawning = true;
             Tm.refTimer = new Vector2(0.5f, 2f);
-            ResetCooldown();
+            resetCd = true;
         }
         else if (me.me.classe == Character.Classe.Vocaloid)
         {
             pc.cloneFireRate = 1f;
-            ResetCooldown();
+            resetCd = true;
         }
         else if (me.me.classe == Character.Classe.Sister)
         {
             pc.canTakeDamage = true;
-            ResetCooldown();
+            resetCd = true;
         }
     }
 
