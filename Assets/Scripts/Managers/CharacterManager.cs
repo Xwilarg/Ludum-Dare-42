@@ -28,9 +28,8 @@ public class CharacterManager : MonoBehaviour
             timer = Random.Range(refTimer.x, refTimer.y);
             GameObject go = Instantiate(characPrefab, new Vector2(15f, Random.Range(3f, 4f)), Quaternion.identity);
             MyCharacter charac = go.GetComponent<MyCharacter>();
-            if (0 == 0 || Character.basicCharacters.Count > 0 && Random.Range(0, 10) == 0)
-                charac.me = Character.basicCharacters[2];
-            //charac.me = Character.basicCharacters[Random.Range(0, Character.basicCharacters.Count)];
+            if (Character.basicCharacters.Count > 0 && Random.Range(0, 10) == 0)
+                charac.me = Character.basicCharacters[Random.Range(0, Character.basicCharacters.Count)];
             else
             {
                 charac.me = Character.clone;
