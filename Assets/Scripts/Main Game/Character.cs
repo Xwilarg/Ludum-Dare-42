@@ -124,7 +124,7 @@ public class Character
             "I LOST MY PHONE !!",
             "*glares at infinite endless space around, anxious*",
         }, Resources.Load<RuntimeAnimatorController>("Fearful/HangingState"), Resources.Load<Sprite>("Fearful/SitDown"), Sexe.Male,
-        "Aaaaaaaaaaaaaaaaaaah Ruuuun!!", 15f, Classe.Fearful, "Contagious fear: Increase speed for a short amount of time.");
+        "Aaaaaaaaaaaaaaaaaaah Ruuuun!!", 20f, Classe.Fearful, "Contagious fear: Increase speed for a short amount of time.");
 
     public static Character LittleSister = new Character("Tanya Dezora",
         "Your little sister. Wait… What is she doing here ?",
@@ -154,7 +154,7 @@ public class Character
             "What is this thing behind ? Does it want to fight ?",
             "Next time, you go on my shoulders!",
         }, Resources.Load<RuntimeAnimatorController>("SportGirl/HangingState"), Resources.Load<Sprite>("SportGirl/SitDown"), Sexe.Female,
-        "I'm glad to be with you, sister!", 50f, Classe.Sport, "Copilote: You can control your movements while jumping" + System.Environment.NewLine +
+        "I'm glad to be with you, sister!", 35f, Classe.Sport, "Copilote: You can control your movements while jumping" + System.Environment.NewLine +
                                                              "(If playing Rinna) Sister's love: +1 Life");
 
     public static Character Narcissistic = new Character("Sheldon Tonnelier",
@@ -170,7 +170,7 @@ public class Character
             "You suffer ? Does it affect me ? No ? Then suffer in silence.",
             "A single use of Healing Symbol would save us all, but … hm, yes that’s complicated.",
         }, Resources.Load<RuntimeAnimatorController>("Narcissistic/HangingState"), Resources.Load<Sprite>("Narcissistic/SitDown"), Sexe.Male,
-        "Paladin use \"luck\" !!!", 10f, Classe.Narcissistic, "Luck spell: Reduces spawnrate of bridge-holes.");
+        "Paladin use \"luck\" !!!", 15f, Classe.Narcissistic, "Luck spell: Reduces spawnrate of bridge-holes.");
 
     public static Character DeadBody = new Character("Ded",
         "Judging by the odor and his eye that rolled away, this person looks dead",
@@ -200,7 +200,7 @@ public class Character
             "Medic here, Medic there, can’t you stop crying, you just lost a leg ...",
             "You know, that’s not really good for your back.",
         }, Resources.Load<RuntimeAnimatorController>("Medic/HangingState"), Resources.Load<Sprite>("Medic/SitDown"), Sexe.Male,
-        "Oops, wrong syringe.", 40f, Classe.Medic, "Injection: +1 Life.\n(not sure what's inside that syringe)");
+        "Oops, wrong syringe.", 30f, Classe.Medic, "Injection: +1 Life.\n(not sure what's inside that syringe)");
 
     public static Character Epichan = new Character("Epi-chan",
         "Know a good school you should probably join for only *cough* 8000€ by years",
@@ -260,7 +260,7 @@ public class Character
             "Could I stay with you after that ?",
             "I don’t know how to thank you ...",
         }, Resources.Load<RuntimeAnimatorController>("LostChild/HangingState"), Resources.Load<Sprite>("LostChild/SitDown"), Sexe.Female,
-        "GO AWAY !", 40f, Classe.Lost, "I'm a strong independant woman: stops mini-poutches and bridge-hole from spawning.");
+        "GO AWAY !", 30f, Classe.Lost, "I'm a (strong) independant woman: stops mini-poutches and bridge-hole from spawning.");
 
     public static Character Vocaloid = new Character("Pina",
         "Vocaloid singer since she was born, she know nothing else than music.",
@@ -275,16 +275,16 @@ public class Character
             "You threw a lot of people away… I’m kind of glad you’re evil too.",
             "I sometimes feel like I’m lifeless but that doesn’t really bother me",
         }, Resources.Load<RuntimeAnimatorController>("Vocaloid/HangingState"), Resources.Load<Sprite>("Vocaloid/SitDown"), Sexe.Female,
-        "It's my turn to shine!", 10f, Classe.Vocaloid, "Joyful song: Increase clone aim for a short time");
+        "It's my turn to shine!", 15f, Classe.Vocaloid, "Joyful song: Increase clone aim for a short time");
 
     public static List<Character> basicCharacters = new List<Character>() {
-       tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
+       tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid, LostChild
     };
 
     public static void Reset()
     {
         basicCharacters = new List<Character>() {
-            tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
+            tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid, LostChild
         };
     }
 }

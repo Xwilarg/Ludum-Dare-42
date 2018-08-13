@@ -255,7 +255,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "<b>L\xE9andre:</b>\nSome people say that he attract girls like a magnet.\n\n<b>Special:</b>\nGirls
+  m_Text: "<b>L\xE9andre:</b>\nSome people say that he attracts girls like a magnet.\n\n<b>Special:</b>\nGirls
     drop rate +50%\n"
 --- !u!222 &24492014
 CanvasRenderer:
@@ -2859,7 +2859,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '<b>Rinna:</b>
 
-    Rikka''s younger sister, a bit more discret so people tend to not really remember
+    Rikka''s younger sister, a bit more discret so people tends to not really remember
     her.
 
 
