@@ -144,7 +144,7 @@ public class CharacterPanelDelete : MonoBehaviour
             {
                 StartTimer(me.me.ability);
                 ResetCooldown();
-                pc.score += 20f;
+                pc.score += 200f;
             }
         }
         if (speTimer < 0f && speTimer > -1f)
