@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class Almanac : MonoBehaviour
 {
     private List<Character> saved;
+    public float score;
 
     public void AddSaved(Character c)
     {
