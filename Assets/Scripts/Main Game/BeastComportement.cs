@@ -20,7 +20,7 @@ public class BeastComportement : MonoBehaviour
         hm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<HealthManager>();
     }
 
-    private void Update ()
+    private void Update()
     {
         float rspeed = (295 - Player.GetComponent<PlayerController>().speed);
         transform.Translate(new Vector2(rspeed * Time.deltaTime / maxCapacitor, 0f));
