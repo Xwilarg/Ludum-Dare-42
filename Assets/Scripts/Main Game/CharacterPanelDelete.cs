@@ -56,7 +56,7 @@ public class CharacterPanelDelete : MonoBehaviour
     {
         attackTimer -= Time.deltaTime;
         speTimer -= Time.deltaTime;
-        if (attackTimer < 0f)
+        if (attackTimer < 0f && cooldownPanel.gameObject.activeInHierarchy)
         {
             cooldownPanel.gameObject.SetActive(false);
             if (me.me.classe == Character.Classe.Medic)
@@ -67,14 +67,14 @@ public class CharacterPanelDelete : MonoBehaviour
             else if (me.me.classe == Character.Classe.Fearful)
             {
                 speTimer = 5f;
-                pc.speed += 150f;
+                pc.speed += 100f;
             }
         }
         if (speTimer < 0f && speTimer > -1f)
         {
             if (me.me.classe == Character.Classe.Fearful)
             {
-                pc.speed -= 150f;
+                pc.speed -= 100f;
                 ResetCooldown();
             }
             speTimer = -1.5f;
