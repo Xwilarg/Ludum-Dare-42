@@ -101,6 +101,7 @@ public class CharacterPanelDelete : MonoBehaviour
             }
             else if (me.me.classe == Character.Classe.Tsundere)
             {
+                // Don't add StartTimer to not spam
                 GameObject go = Instantiate(lovePrefab, me.transform.position, Quaternion.identity);
                 go.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 30f, ForceMode2D.Impulse);
                 ResetCooldown();
@@ -125,7 +126,12 @@ public class CharacterPanelDelete : MonoBehaviour
                     Sm.spawning = false;
                     Tm.refTimer = new Vector2(100f, 100f);
                 }
-
+            }
+            else if (me.me.classe == Character.Classe.Vocaloid)
+            {
+                StartTimer(me.me.ability);
+                speTimer = 5f;
+                pc.cloneFireRate = 0.8f;
             }
         }
         if (speTimer < 0f && speTimer > -1f)
@@ -135,20 +141,25 @@ public class CharacterPanelDelete : MonoBehaviour
                 pc.speed -= 20f;
                 ResetCooldown();
             }
-            if (me.me.classe == Character.Classe.Drunk)
+            else if (me.me.classe == Character.Classe.Drunk)
             {
                 pc.speed += 10f;
                 ResetCooldown();
             }
-            if (me.me.classe == Character.Classe.Narcissistic)
+            else if (me.me.classe == Character.Classe.Narcissistic)
             {
                 Tm.refTimer = new Vector2(0.5f, 2f);
                 ResetCooldown();
             }
-            if (me.me.classe == Character.Classe.Lost)
+            else if (me.me.classe == Character.Classe.Lost)
             {
                 Sm.spawning = true;
                 Tm.refTimer = new Vector2(0.5f, 2f);
+                ResetCooldown();
+            }
+            else if (me.me.classe == Character.Classe.Vocaloid)
+            {
+                pc.cloneFireRate = 1f;
                 ResetCooldown();
             }
             speTimer = -1.5f;

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114557912015798204}
   - component: {fileID: 212382005453371932}
   - component: {fileID: 60133067432944518}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Mini1
   m_TagString: Puchi
   m_Icon: {fileID: 0}

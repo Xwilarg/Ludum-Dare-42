@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject descriptionPanel;
     public GameObject bulletPrefab;
+    public float cloneFireRate {set; get;}
     public float score { set; get; }
     private int index;
     private bool inTrap;
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         index = 0;
         inTrap = false;
+        cloneFireRate = 1f;
     }
 
     private void Update()

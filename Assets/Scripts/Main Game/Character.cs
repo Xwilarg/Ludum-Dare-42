@@ -214,7 +214,7 @@ public class Character
             "If you don’t have enough money, you can also borrow some to banks. The we will be glad to borrow yours.",
             "So you will join our school ? At least do it for me, please.",
         }, Resources.Load<RuntimeAnimatorController>("Epichan/HangingState"), Resources.Load<Sprite>("Epichan/SitDown"), Sexe.Female,
-        "Help Bocal ! Go !", 10f, Classe.Epichan, "");
+        "It's time to pay", 10f, Classe.Epichan, "It's only 8k: Increase your score");
 
     public static Character ConfusedGuy = new Character("Dimitry Delabar",
         "Always have his head on the clouds, he lost countless jobs because of that.",
@@ -229,7 +229,7 @@ public class Character
             "Can we take a break ? I need to pee",
             "Isn’t the weather lovely today ?",
         }, Resources.Load<RuntimeAnimatorController>("ConfusedGuy/HangingState"), Resources.Load<Sprite>("ConfusedGuy/SitDown"), Sexe.Male,
-        "You hungry budy ?", 10f, Classe.Confused, "");
+        "You hungry budy?", 10f, Classe.Confused, "");
 
     public static Character Mechanic = new Character("Raoul Dozzo",
         "Loves cars and custom handmade stuff.",
@@ -244,7 +244,7 @@ public class Character
             "I once made her start with the finger if you know what I mean.",
             "Smells like piss",
         }, Resources.Load<RuntimeAnimatorController>("Mechanic/HangingState"), Resources.Load<Sprite>("Mechanic/SitDown"), Sexe.Male,
-        "I'm working on it pal !", 10f, Classe.Mechano, "");
+        "I'm working on it pal!", 10f, Classe.Mechano, "");
 
     public static Character LostChild = new Character("Aruna Way",
         "Beaten up by her parents for a long time. So ran away from home, only one of her family that is still alive.",
@@ -274,7 +274,7 @@ public class Character
             "You threw a lot of people away… I’m kind of glad you’re evil too.",
             "I sometimes feel like I’m lifeless but that doesn’t really bother me",
         }, Resources.Load<RuntimeAnimatorController>("Vocaloid/HangingState"), Resources.Load<Sprite>("Vocaloid/SitDown"), Sexe.Female,
-        "", 10f, Classe.Vocaloid, "");
+        "It's my turn to shine!", 10f, Classe.Vocaloid, "Joyful song: Increase clone aim for a short time");
 
     public static List<Character> basicCharacters = new List<Character>() {
        LostChild, tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
