@@ -65,12 +65,18 @@ public class CharacterPanelDelete : MonoBehaviour
 
     private void Update()
     {
+        if ((me.me.classe == Character.Classe.Sport && pc.perso != PlayerController.Perso.Rinna)
+            || (me.me.classe == Character.Classe.Medic && pc.perso == PlayerController.Perso.Rinna))
+        {
+            attackTimer = 0f;
+            return;
+        }
         attackTimer -= Time.deltaTime;
         speTimer -= Time.deltaTime;
         if (attackTimer < 0f && cooldownPanel.gameObject.activeInHierarchy)
         {
             cooldownPanel.gameObject.SetActive(false);
-            if (me.me.classe == Character.Classe.Medic)
+            if (me.me.classe == Character.Classe.Medic || me.me.classe == Character.Classe.Sport)
             {
                 if (pc.Heal())
                 {
