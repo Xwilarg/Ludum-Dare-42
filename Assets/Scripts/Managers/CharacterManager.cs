@@ -32,7 +32,7 @@ public class CharacterManager : MonoBehaviour
             MyCharacter charac = go.GetComponent<MyCharacter>();
             if (test == true)
             {
-                charac.me = Character.basicCharacters[5];
+                charac.me = Character.basicCharacters[0];
                 test = false;
             }
             else if (Character.basicCharacters.Count > 0 && Random.Range(0, 6) == 0)

@@ -93,6 +93,11 @@ public class PlayerController : MonoBehaviour
         TakeDamage();
     }
 
+    public bool CanTakeDamage()
+    {
+        return (index < images.Length);
+    }
+
     public bool Heal()
     {
         if (index == 0)
@@ -102,7 +107,7 @@ public class PlayerController : MonoBehaviour
         return (true);
     }
 
-    private void TakeDamage()
+    public void TakeDamage()
     {
         if (index >= images.Length)
             return;

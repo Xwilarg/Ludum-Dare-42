@@ -9,8 +9,9 @@ public class SummonMini : MonoBehaviour
     [SerializeField]
     public GameObject Pc;
     private float delta;
+    public bool spawning = true;
 
-	void Start () {
+    void Start () {
         Pc = GameObject.FindGameObjectWithTag("Player");
         delta = Time.time;		
 	}
@@ -19,7 +20,7 @@ public class SummonMini : MonoBehaviour
 	void Update () {
         float rDelta = Time.time;
 
-        if (rDelta - delta > 3f)
+        if (spawning == true && rDelta - delta > 3f)
         {
             GameObject mini = Instantiate(MiniPrefab, transform.position, Quaternion.identity);
             mini.transform.SetParent(Pc.transform);

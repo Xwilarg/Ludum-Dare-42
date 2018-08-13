@@ -259,7 +259,7 @@ public class Character
             "Could I stay with you after that ?",
             "I don’t know how to thank you ...",
         }, Resources.Load<RuntimeAnimatorController>("LostChild/HangingState"), Resources.Load<Sprite>("LostChild/SitDown"), Sexe.Female,
-        "", 10f, Classe.Lost, "");
+        "", 50f, Classe.Lost, "");
 
     public static Character Vocaloid = new Character("Pina",
         "Vocaloid singer since she was born, she know nothing else than music.",
@@ -277,7 +277,7 @@ public class Character
         "", 10f, Classe.Vocaloid, "");
 
     public static List<Character> basicCharacters = new List<Character>() {
-        tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
+       LostChild, tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
     };
 
     public static void Reset()

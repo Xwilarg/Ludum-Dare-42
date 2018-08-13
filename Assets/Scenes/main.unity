@@ -1062,6 +1062,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bfe819db43e72644bfb743763caa33d, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &759079130 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1157453653195706, guid: 8bfe819db43e72644bfb743763caa33d,
+    type: 2}
+  m_PrefabInternal: {fileID: 759079129}
 --- !u!1 &788558937
 GameObject:
   m_ObjectHideFlags: 0
@@ -3285,6 +3290,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114177078676980140, guid: 8117af9de8dede544a5243cc8eafbb5f,
+        type: 2}
+      propertyPath: Poutch
+      value: 
+      objectReference: {fileID: 759079130}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8117af9de8dede544a5243cc8eafbb5f, type: 2}
   m_IsPrefabAsset: 0
@@ -3372,6 +3382,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trapPrefab: {fileID: 1048760825476526, guid: fed54f71cd6b2c64da23643d1370d939, type: 2}
   player: {fileID: 450397496}
+  refTimer: {x: 0.5, y: 2}
 --- !u!114 &1999922440
 MonoBehaviour:
   m_ObjectHideFlags: 0

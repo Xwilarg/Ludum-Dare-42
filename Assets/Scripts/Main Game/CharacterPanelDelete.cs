@@ -11,9 +11,11 @@ public class CharacterPanelDelete : MonoBehaviour
     private RectTransform cooldownPanel;
     [SerializeField]
     private GameObject lovePrefab;
+    [SerializeField]
+    private GameObject Poutch;
+
     private TrapManager Tm;
     public MyCharacter me { set; private get; }
-
     private const float refTimer = 2f;
     private readonly Vector2 speakTimerRef = new Vector2(6f, 15f);
     private float speakTimer;
@@ -22,6 +24,7 @@ public class CharacterPanelDelete : MonoBehaviour
     private float attackTimer;
     private PlayerController pc;
     private float speTimer;
+    private SummonMini Sm;
 
     private void Start()
     {
@@ -29,6 +32,7 @@ public class CharacterPanelDelete : MonoBehaviour
         timer = -1f;
         Pm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PanelManager>();
         Tm = Pm.GetComponent<TrapManager>();
+        Sm = Poutch.GetComponent<SummonMini>();
         StartTimer(me.me.entryLine);
         ResetSpeak();
         attackTimer = me.me.cooldown;
@@ -105,6 +109,22 @@ public class CharacterPanelDelete : MonoBehaviour
                 speTimer = 5f;
                 Tm.refTimer = new Vector2(-0.25f, 4f);
             }
+            else if (me.me.classe == Character.Classe.Lost)
+            {
+                if (pc.CanTakeDamage() == false)
+                {
+                    DeleteMe(gameObject);
+                }
+                else
+                {
+                    pc.TakeDamage();
+                    StartTimer(me.me.ability);
+                    speTimer = 5f;
+                    Sm.spawning = false;
+                    Tm.refTimer = new Vector2(1f, 1f);
+                }
+
+            }
         }
         if (speTimer < 0f && speTimer > -1f)
         {
@@ -120,6 +140,12 @@ public class CharacterPanelDelete : MonoBehaviour
             }
             if (me.me.classe == Character.Classe.Narcissistic)
             {
+                Tm.refTimer = new Vector2(0.5f, 2f);
+                ResetCooldown();
+            }
+            if (me.me.classe == Character.Classe.Lost)
+            {
+                Sm.spawning = true;
                 Tm.refTimer = new Vector2(0.5f, 2f);
                 ResetCooldown();
             }
