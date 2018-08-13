@@ -13,6 +13,7 @@ TagManager:
   - Almanac
   - Projectile
   - Puchi
+  - TsunLove
   layers:
   - Default
   - TransparentFX

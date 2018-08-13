@@ -9,6 +9,8 @@ public class CharacterPanelDelete : MonoBehaviour
     private Text textSpeak;
     [SerializeField]
     private RectTransform cooldownPanel;
+    [SerializeField]
+    private GameObject lovePrefab;
     public MyCharacter me { set; private get; }
 
     private const float refTimer = 2f;
@@ -66,6 +68,8 @@ public class CharacterPanelDelete : MonoBehaviour
                     StartTimer(me.me.ability);
                     ResetCooldown();
                 }
+                else
+                    cooldownPanel.gameObject.SetActive(true);
             }
             else if (me.me.classe == Character.Classe.Fearful)
             {
@@ -86,6 +90,12 @@ public class CharacterPanelDelete : MonoBehaviour
                     pc.Heal();
                     ResetCooldown();
                 }
+            }
+            else if (me.me.classe == Character.Classe.Tsundere)
+            {
+                GameObject go = Instantiate(lovePrefab, me.transform.position, Quaternion.identity);
+                go.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 30f, ForceMode2D.Impulse);
+                ResetCooldown();
             }
         }
         if (speTimer < 0f && speTimer > -1f)

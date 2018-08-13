@@ -93,7 +93,7 @@ public class Character
             "You... won't throw me away, will you ?",
             "You really run fast, that remind me when we were at primary school ..."
         }, Resources.Load<RuntimeAnimatorController>("Tsundere/HangingState"), Resources.Load<Sprite>("Tsundere/SitDown"), Sexe.Female,
-        "...", 10f, Classe.Tsundere);
+        "", 1f, Classe.Tsundere);
 
     public static Character drunkMan = new Character("Jhon Joe Jimbob",
         "Lost his parents at age 14 and found resilience in alcohol, will probably lose his life too now, that’s sad, but he is fat, so it’s funny.",
@@ -277,4 +277,11 @@ public class Character
     public static List<Character> basicCharacters = new List<Character>() {
         tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic
     };
+
+    public static void Reset()
+    {
+        basicCharacters = new List<Character>() {
+            tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic
+        };
+    }
 }
