@@ -277,7 +277,7 @@ public class Character
         "", 10f, Classe.Vocaloid, "");
 
     public static List<Character> basicCharacters = new List<Character>() {
-       LostChild, tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
+       tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
     };
 
     public static void Reset()
