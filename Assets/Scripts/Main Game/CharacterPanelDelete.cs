@@ -1,14 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class CharacterPanelDelete : MonoBehaviour {
-
+public class CharacterPanelDelete : MonoBehaviour
+{
     [SerializeField]
     private GameObject panelSpeak;
     [SerializeField]
     private Text textSpeak;
+    [SerializeField]
+    private RectTransform cooldownPanel;
     public MyCharacter me { set; private get; }
 
     private const float refTimer = 2f;
@@ -16,6 +16,7 @@ public class CharacterPanelDelete : MonoBehaviour {
     private float speakTimer;
     private float timer;
     private PanelManager Pm;
+    private float attackTimer;
 
     private void Start()
     {
@@ -23,6 +24,9 @@ public class CharacterPanelDelete : MonoBehaviour {
         Pm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PanelManager>();
         StartTimer(me.me.entryLine);
         ResetSpeak();
+        attackTimer = me.me.cooldown;
+        if (me.me.name == "Clone")
+            cooldownPanel.gameObject.SetActive(false);
     }
 
     private void ResetSpeak()
@@ -39,6 +43,13 @@ public class CharacterPanelDelete : MonoBehaviour {
 
     private void Update()
     {
+        attackTimer -= Time.deltaTime;
+        if (attackTimer < 0f)
+        {
+            cooldownPanel.gameObject.SetActive(false);
+        }
+        else
+            cooldownPanel.localScale = new Vector3(1f, attackTimer / me.me.cooldown, 0f);
         speakTimer -= Time.deltaTime;
         if (speakTimer < 0f)
         {

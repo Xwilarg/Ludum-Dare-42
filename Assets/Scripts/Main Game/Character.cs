@@ -5,7 +5,7 @@ public class Character
 {
     private Character(string name, string description1,
         float weight, int height, int age, string entryLine, string exitLine, string[] lines,
-        RuntimeAnimatorController hanging, Sprite sitDown, Sexe sexe, string winAlone)
+        RuntimeAnimatorController hanging, Sprite sitDown, Sexe sexe, string winAlone, float cooldown)
     {
         this.name = name;
         this.description1 = description1;
@@ -20,7 +20,8 @@ public class Character
         nbSpecials = 0;
         this.sexe = sexe;
         this.winAlone = winAlone;
-        this.weapon = null;
+        this.cooldown = cooldown;
+        weapon = null;
     }
 
     public enum Sexe
@@ -42,12 +43,13 @@ public class Character
     public int nbSpecials;
     public readonly Sexe sexe;
     public readonly string winAlone;
+    public readonly float cooldown;
     public Weapon weapon;
 
     public const float WeightMultiplicator = 0.03f;
 
     public static Character clone = new Character("Clone",
-        "Your childhood friend that definitly doesn't like you, you idiot!\nShe got rejected many times at medium school so she now is afraid to confess.",
+        "A clone that fight for the world liberation.",
         80f, 175, 23,
         "At your order.",
         "Fighting for you was an honor.",
@@ -56,7 +58,7 @@ public class Character
             "Aiming at target.",
             "For the earth!"
         }, Resources.Load<RuntimeAnimatorController>("Clone/HangingState"), Resources.Load<Sprite>("Clone/SitDown"), Sexe.Female,
-        "");
+        "", 10f);
 
     public static Character tsundere = new Character("Hanashi Tsubaka",
         "Your childhood friend that definitly doesn't like you, you idiot!\nShe got rejected many times at medium school so she now is afraid to confess.",
@@ -70,7 +72,7 @@ public class Character
             "You... won't throw me away, will you ?",
             "You really run fast, that remind me when we were at primary school ..."
         }, Resources.Load<RuntimeAnimatorController>("Tsundere/HangingState"), Resources.Load<Sprite>("Tsundere/SitDown"), Sexe.Female,
-        "You ended up alone with your childhood tsundere friend, Hanashi Tsubaka. You didn't manage to create a new world but at least you could now die peacefully as she confessed to you.");
+        "You ended up alone with your childhood tsundere friend, Hanashi Tsubaka. You didn't manage to create a new world but at least you could now die peacefully as she confessed to you.", 10f);
 
     public static Character drunkMan = new Character("Jhon Joe Jimbob",
         "Lost his parents at age 14 and found resilience in alcohol, will probably lose his life too now, that’s sad, but he is fat, so it’s funny.",
@@ -84,7 +86,7 @@ public class Character
             "I think he’s following us, not sure, I might be stoned too.",
             "You know, I always thought that my left toe was bigger than my right one hehe."
         }, Resources.Load<RuntimeAnimatorController>("DrunkMan/HangingState"), Resources.Load<Sprite>("DrunkMan/SitDown"), Sexe.Male,
-        "");
+        "", 10f);
 
     public static Character fearful = new Character("Edmund Derp",
         "Is afraid of strange-shaped clouds, likes watch TV with his pet-hamster.",
@@ -99,7 +101,7 @@ public class Character
             "I LOST MY PHONE !!",
             "*glares at infinite endless space around, anxious*",
         }, Resources.Load<RuntimeAnimatorController>("Fearful/HangingState"), Resources.Load<Sprite>("Fearful/SitDown"), Sexe.Male,
-        "");
+        "", 10f);
 
     public static Character LittleSister = new Character("Tanya Dezora",
         "Your little sister. Wait… What is she doing here ?",
@@ -114,7 +116,7 @@ public class Character
             "I think I peed myself...",
             "What is this big scary thing behind ?",
         }, Resources.Load<RuntimeAnimatorController>("LittleSister/HangingState"), Resources.Load<Sprite>("LittleSister/SitDown"), Sexe.Female,
-        "");
+        "", 10f);
 
     public static Character SportGirl = new Character("Rikka Naru",
         "When she was young, Rikka was always sick and stick to bed. Now that she can run around, well, she run around.",
@@ -129,7 +131,7 @@ public class Character
             "What is this thing behind ? Does it want to fight ?",
             "Next time, you go on my shoulders!",
         }, Resources.Load<RuntimeAnimatorController>("SportGirl/HangingState"), Resources.Load<Sprite>("SportGirl/SitDown"), Sexe.Female,
-        "");
+        "", 10f);
 
     public static Character Narcissistic = new Character("Sheldon Tonnelier",
         "Geek, gifted, have a paladin lvl 110 on World of Derpass.",
@@ -144,7 +146,7 @@ public class Character
             "You suffer ? Does it affect me ? No ? Then suffer in silence.",
             "A single use of Healing Symbol would save us all, but … hm, yes that’s complicated.",
         }, Resources.Load<RuntimeAnimatorController>("Narcissistic/HangingState"), Resources.Load<Sprite>("Narcissistic/SitDown"), Sexe.Male,
-        "");
+        "", 10f);
 
     public static Character DeadBody = new Character("Ded",
         "Judging by the odor and his eye that rolled away, this person looks dead",
@@ -159,7 +161,7 @@ public class Character
             "...",
             "...",
         }, Resources.Load<RuntimeAnimatorController>("DeadBody/HangingState"), Resources.Load<Sprite>("DeadBody/SitDown"), Sexe.Male,
-        "");
+        "", 10f);
 
     public static Character Medic = new Character("Albrecht Ludwing",
         "Does not care about life, but will never run out of syringes. Who needs a heart anyway ? You ? Ahahahahah ... No.",
@@ -174,7 +176,7 @@ public class Character
             "Medic here, Medic there, can’t you stop crying, you just lost a leg ...",
             "You know, that’s not really good for your back.",
         }, Resources.Load<RuntimeAnimatorController>("Medic/HangingState"), Resources.Load<Sprite>("Medic/SitDown"), Sexe.Male,
-        "");
+        "", 10f);
 
     public static Character Epichan = new Character("Epi-chan",
         "Know a good school you should probably join for only *cough* 8000€ by years",
@@ -189,7 +191,7 @@ public class Character
             "If you don’t have enough money, you can also borrow some to banks. The we will be glad to borrow yours.",
             "So you will join our school ? At least do it for me, please.",
         }, Resources.Load<RuntimeAnimatorController>("Epichan/HangingState"), Resources.Load<Sprite>("Epichan/SitDown"), Sexe.Female,
-        "");
+        "", 10f);
 
     public static Character ConfusedGuy = new Character("Dimitry Delabar",
         "Always have his head on the clouds, he lost countless jobs because of that.",
@@ -204,7 +206,7 @@ public class Character
             "Can we take a break ? I need to pee",
             "Isn’t the weather lovely today ?",
         }, Resources.Load<RuntimeAnimatorController>("ConfusedGuy/HangingState"), Resources.Load<Sprite>("ConfusedGuy/SitDown"), Sexe.Male,
-        "");
+        "", 10f);
 
     public static Character Mechanic = new Character("Raoul Dozzo",
         "Loves cars and custom handmade stuff.",
@@ -219,7 +221,7 @@ public class Character
             "I once made her start with the finger if you know what I mean.",
             "Smells like piss",
         }, Resources.Load<RuntimeAnimatorController>("Mechanic/HangingState"), Resources.Load<Sprite>("Mechanic/SitDown"), Sexe.Male,
-        "");
+        "", 10f);
 
     public static Character LostChild = new Character("Aruna Way",
         "Beaten up by her parents for a long time. So ran away from home, only one of her family that is still alive.",
@@ -234,7 +236,7 @@ public class Character
             "Could I stay with you after that ?",
             "I don’t know how to thank you ...",
         }, Resources.Load<RuntimeAnimatorController>("LostChild/HangingState"), Resources.Load<Sprite>("LostChild/SitDown"), Sexe.Female,
-        "");
+        "", 10f);
 
     public static Character Vocaloid = new Character("Pina",
         "Vocaloid singer since she was born, she know nothing else than music.",
@@ -249,7 +251,7 @@ public class Character
             "You threw a lot of people away… I’m kind of glad you’re evil too.",
             "I sometimes feel like I’m lifeless but that doesn’t really bother me",
         }, Resources.Load<RuntimeAnimatorController>("Vocaloid/HangingState"), Resources.Load<Sprite>("Vocaloid/SitDown"), Sexe.Female,
-        "");
+        "", 10f);
 
     public static List<Character> basicCharacters = new List<Character>() {
         tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic
