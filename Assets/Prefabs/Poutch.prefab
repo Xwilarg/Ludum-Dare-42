@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: 4881876915384726}
   - component: {fileID: 95272191650449596}
   - component: {fileID: 114943424764908166}
+  - component: {fileID: 114664517027201412}
   m_Layer: 0
   m_Name: Poutch
   m_TagString: Beast
@@ -1658,6 +1659,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   rotationSpeed: 100
+--- !u!114 &114664517027201412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1157453653195706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6114876a1f4a1e46b5db9ac575b0980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MiniPrefab: {fileID: 1143669042851378, guid: 72d7673d0b954ac408232daaccdfe87f, type: 2}
+  Pc: {fileID: 0}
+  spawning: 1
 --- !u!114 &114824153893500584
 MonoBehaviour:
   m_ObjectHideFlags: 1

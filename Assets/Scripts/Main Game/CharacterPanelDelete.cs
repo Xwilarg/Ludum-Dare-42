@@ -11,7 +11,6 @@ public class CharacterPanelDelete : MonoBehaviour
     private RectTransform cooldownPanel;
     [SerializeField]
     private GameObject lovePrefab;
-    [SerializeField]
     private GameObject Poutch;
 
     private TrapManager Tm;
@@ -28,6 +27,9 @@ public class CharacterPanelDelete : MonoBehaviour
 
     private void Start()
     {
+        Poutch = GameObject.FindGameObjectWithTag("Beast");
+        while (Poutch.transform.parent != null)
+            Poutch = Poutch.transform.parent.gameObject;
         pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         timer = -1f;
         Pm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PanelManager>();
@@ -121,7 +123,7 @@ public class CharacterPanelDelete : MonoBehaviour
                     StartTimer(me.me.ability);
                     speTimer = 5f;
                     Sm.spawning = false;
-                    Tm.refTimer = new Vector2(1f, 1f);
+                    Tm.refTimer = new Vector2(100f, 100f);
                 }
 
             }

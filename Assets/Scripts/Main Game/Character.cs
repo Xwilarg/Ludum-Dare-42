@@ -109,7 +109,7 @@ public class Character
             "I think he’s following us, not sure, I might be stoned too.",
             "You know, I always thought that my left toe was bigger than my right one hehe."
         }, Resources.Load<RuntimeAnimatorController>("DrunkMan/HangingState"), Resources.Load<Sprite>("DrunkMan/SitDown"), Sexe.Male,
-        "Want sum?", 10f, Classe.Drunk, "Homemade alcoohol: Either you win a heart, either you loose speed for a short time");
+        "Want sum?", 10f, Classe.Drunk, "Homemade alcoohol: 50% +1 Life or 50% lowered speed for a short amount of time.");
 
     public static Character fearful = new Character("Edmund Derp",
         "Is afraid of strange-shaped clouds, likes watch TV with his pet-hamster.",
@@ -124,7 +124,7 @@ public class Character
             "I LOST MY PHONE !!",
             "*glares at infinite endless space around, anxious*",
         }, Resources.Load<RuntimeAnimatorController>("Fearful/HangingState"), Resources.Load<Sprite>("Fearful/SitDown"), Sexe.Male,
-        "Aaaaaaaaaaaaaaaaaaah Ruuuun!!", 10f, Classe.Fearful, "Contagious fear: Increase speed for a short time");
+        "Aaaaaaaaaaaaaaaaaaah Ruuuun!!", 10f, Classe.Fearful, "Contagious fear: Increase speed for a short amount of time.");
 
     public static Character LittleSister = new Character("Tanya Dezora",
         "Your little sister. Wait… What is she doing here ?",
@@ -169,7 +169,7 @@ public class Character
             "You suffer ? Does it affect me ? No ? Then suffer in silence.",
             "A single use of Healing Symbol would save us all, but … hm, yes that’s complicated.",
         }, Resources.Load<RuntimeAnimatorController>("Narcissistic/HangingState"), Resources.Load<Sprite>("Narcissistic/SitDown"), Sexe.Male,
-        "Paladin Luck-spell !!!", 10f, Classe.Narcissistic, "Paladin luck spell: Reduce hole rate for a short time");
+        "Paladin use \"luck\" !!!", 10f, Classe.Narcissistic, "Luck spell: Reduces spawnrate of bridge-holes.");
 
     public static Character DeadBody = new Character("Ded",
         "Judging by the odor and his eye that rolled away, this person looks dead",
@@ -184,7 +184,7 @@ public class Character
             "...",
             "...",
         }, Resources.Load<RuntimeAnimatorController>("DeadBody/HangingState"), Resources.Load<Sprite>("DeadBody/SitDown"), Sexe.Male,
-        "*dislocate*", 10f, Classe.Dead, "");
+        "*dislocate*", 10f, Classe.Dead, "Ded: throws himself on the beast ¯\\_(ツ)_/¯.");
 
     public static Character Medic = new Character("Albrecht Ludwing",
         "Does not care about life, but will never run out of syringes. Who needs a heart anyway ? You ? Ahahahahah ... No.",
@@ -199,7 +199,7 @@ public class Character
             "Medic here, Medic there, can’t you stop crying, you just lost a leg ...",
             "You know, that’s not really good for your back.",
         }, Resources.Load<RuntimeAnimatorController>("Medic/HangingState"), Resources.Load<Sprite>("Medic/SitDown"), Sexe.Male,
-        "Oops, wrong syringe.", 40f, Classe.Medic, "Not-so-medical seringue: Heal one heart");
+        "Oops, wrong syringe.", 40f, Classe.Medic, "Injection: +1 Life.\n(not sure what's inside that syringe)");
 
     public static Character Epichan = new Character("Epi-chan",
         "Know a good school you should probably join for only *cough* 8000€ by years",
@@ -259,7 +259,7 @@ public class Character
             "Could I stay with you after that ?",
             "I don’t know how to thank you ...",
         }, Resources.Load<RuntimeAnimatorController>("LostChild/HangingState"), Resources.Load<Sprite>("LostChild/SitDown"), Sexe.Female,
-        "", 50f, Classe.Lost, "");
+        "GO AWAY !", 50f, Classe.Lost, "I'm a strong independant woman: stops mini-poutches and bridge-hole from spawning.");
 
     public static Character Vocaloid = new Character("Pina",
         "Vocaloid singer since she was born, she know nothing else than music.",
@@ -277,13 +277,13 @@ public class Character
         "", 10f, Classe.Vocaloid, "");
 
     public static List<Character> basicCharacters = new List<Character>() {
-       tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
+       LostChild, tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
     };
 
     public static void Reset()
     {
         basicCharacters = new List<Character>() {
-            tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
+            LostChild, tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
         };
     }
 }

@@ -149,7 +149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &114148413307496042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -192,7 +192,7 @@ MonoBehaviour:
   textSpeak: {fileID: 114885887033186952}
   cooldownPanel: {fileID: 224461367024683866}
   lovePrefab: {fileID: 1272865654462294, guid: af33e37ccde679349b62374cd2d4a99a, type: 2}
-  Poutch: {fileID: 0}
+  Poutch: {fileID: 1157453653195706, guid: 8bfe819db43e72644bfb743763caa33d, type: 2}
 --- !u!114 &114433580170408966
 MonoBehaviour:
   m_ObjectHideFlags: 1
