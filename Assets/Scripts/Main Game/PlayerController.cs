@@ -62,6 +62,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
         anim.speed = speed / 300f;
+        score -= (speed / 300) * Time.deltaTime;
         scoreText.text = "Score: " + score.ToString("00");
         if (isJumping && transform.position.y <= jumpPos.y)
         {
