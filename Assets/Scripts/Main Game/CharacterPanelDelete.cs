@@ -18,6 +18,7 @@ public class CharacterPanelDelete : MonoBehaviour
     private PanelManager Pm;
     private float attackTimer;
     private PlayerController pc;
+    private float speTimer;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class CharacterPanelDelete : MonoBehaviour
         attackTimer = me.me.cooldown;
         if (me.me.classe == Character.Classe.Clone)
             cooldownPanel.gameObject.SetActive(false);
+        speTimer = -1.5f;
     }
 
     private void ResetSpeak()
@@ -53,6 +55,7 @@ public class CharacterPanelDelete : MonoBehaviour
     private void Update()
     {
         attackTimer -= Time.deltaTime;
+        speTimer -= Time.deltaTime;
         if (attackTimer < 0f)
         {
             cooldownPanel.gameObject.SetActive(false);
@@ -61,6 +64,20 @@ public class CharacterPanelDelete : MonoBehaviour
                 if (pc.Heal())
                     ResetCooldown();
             }
+            else if (me.me.classe == Character.Classe.Fearful)
+            {
+                speTimer = 5f;
+                pc.speed *= 1.5f;
+            }
+        }
+        if (speTimer < 0f && speTimer > -1f)
+        {
+            if (me.me.classe == Character.Classe.Fearful)
+            {
+                pc.speed /= 1.5f;
+                ResetCooldown();
+            }
+            speTimer = -1.5f;
         }
         else
             cooldownPanel.localScale = new Vector3(1f, attackTimer / me.me.cooldown, 0f);

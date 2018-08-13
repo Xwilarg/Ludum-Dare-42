@@ -19,7 +19,7 @@ public class WinRecap : MonoBehaviour
         if (win.survivors.Count == 0)
             text.text += "Sadly there was nobody to help you on that task so you just ended up dying alone in a small hole, you pathetic piece of garbage. *cough* Anyway, you should try playing again by saving some people.";
         else if (win.survivors.Count == 1)
-            text.text += win.survivors[0].winAlone;
+            ;// text.text += win.survivors[0].winAlone;
         else if (win.survivors.Count >= 3 && win.survivors.All(x => x.sexe == Character.Sexe.Female))
             text.text += "You didn't managed to create a new world but at least you got a beautiful harem until your death, and as I male developer, I must say it: Congratulation!";
         else

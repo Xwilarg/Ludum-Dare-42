@@ -197,7 +197,7 @@ public class Character
             "Medic here, Medic there, can’t you stop crying, you just lost a leg ...",
             "You know, that’s not really good for your back.",
         }, Resources.Load<RuntimeAnimatorController>("Medic/HangingState"), Resources.Load<Sprite>("Medic/SitDown"), Sexe.Male,
-        "Oops, wrong syringe.", 10f, Classe.Medic);
+        "Oops, wrong syringe.", 30f, Classe.Medic);
 
     public static Character Epichan = new Character("Epi-chan",
         "Know a good school you should probably join for only *cough* 8000€ by years",
