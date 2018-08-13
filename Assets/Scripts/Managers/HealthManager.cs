@@ -27,7 +27,7 @@ public class HealthManager : MonoBehaviour
                 bars[index].sizeDelta = new Vector2(depas, bars[0].sizeDelta.y);
             }
         }
-        else
+        if (index >= bars.Length)
             SceneManager.LoadScene("Win");
     }
 }

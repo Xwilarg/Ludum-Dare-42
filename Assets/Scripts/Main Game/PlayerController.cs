@@ -90,6 +90,9 @@ public class PlayerController : MonoBehaviour
         didLost = true;
         rb.velocity = Vector2.zero;
         lostText.gameObject.SetActive(true);
+        TakeDamage();
+        TakeDamage();
+        TakeDamage();
     }
 
     public bool Heal()
@@ -103,6 +106,8 @@ public class PlayerController : MonoBehaviour
 
     private void TakeDamage()
     {
+        if (index >= images.Length)
+            return;
         if (index == images.Length - 1)
         {
             images[index].color = Color.white;
