@@ -62,15 +62,20 @@ public class CharacterPanelDelete : MonoBehaviour
             if (me.me.classe == Character.Classe.Medic)
             {
                 if (pc.Heal())
+                {
+                    StartTimer(me.me.ability);
                     ResetCooldown();
+                }
             }
             else if (me.me.classe == Character.Classe.Fearful)
             {
+                StartTimer(me.me.ability);
                 speTimer = 5f;
                 pc.speed += 20f;
             }
             else if (me.me.classe == Character.Classe.Drunk)
             {
+                StartTimer(me.me.ability);
                 if (Random.Range(0f, 1f) < 0.5f)
                 {
                     speTimer = 5f;
