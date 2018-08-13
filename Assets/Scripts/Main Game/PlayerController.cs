@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public enum Perso
     {
-        Boris,
+        Romuald,
         Leandre,
         Rinna
     }
