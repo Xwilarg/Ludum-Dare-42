@@ -7,7 +7,7 @@ public class TrapManager : MonoBehaviour
     [SerializeField]
     private GameObject player;
 
-    private readonly Vector2 refTimer = new Vector2(0.5f, 2f);
+    public Vector2 refTimer = new Vector2(0.5f, 2f);
     private float timer;
 
     private void Start()

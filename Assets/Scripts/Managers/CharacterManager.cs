@@ -20,6 +20,7 @@ public class CharacterManager : MonoBehaviour
         timer = Random.Range(refTimer.x, refTimer.y);
         Character.Reset();
     }
+    private bool test = true;
 
     private void Update()
     {
@@ -29,7 +30,12 @@ public class CharacterManager : MonoBehaviour
             timer = Random.Range(refTimer.x, refTimer.y);
             GameObject go = Instantiate(characPrefab, new Vector2(15f, Random.Range(3f, 4f)), Quaternion.identity);
             MyCharacter charac = go.GetComponent<MyCharacter>();
-            if (Character.basicCharacters.Count > 0 && Random.Range(0, 1) == 0)
+            if (test == true)
+            {
+                charac.me = Character.basicCharacters[5];
+                test = false;
+            }
+            else if (Character.basicCharacters.Count > 0 && Random.Range(0, 1) == 0)
                 charac.me = Character.basicCharacters[Random.Range(0, Character.basicCharacters.Count)];
             else
             {

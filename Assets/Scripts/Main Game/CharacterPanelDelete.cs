@@ -11,6 +11,7 @@ public class CharacterPanelDelete : MonoBehaviour
     private RectTransform cooldownPanel;
     [SerializeField]
     private GameObject lovePrefab;
+    private TrapManager Tm;
     public MyCharacter me { set; private get; }
 
     private const float refTimer = 2f;
@@ -27,6 +28,7 @@ public class CharacterPanelDelete : MonoBehaviour
         pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         timer = -1f;
         Pm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PanelManager>();
+        Tm = Pm.GetComponent<TrapManager>();
         StartTimer(me.me.entryLine);
         ResetSpeak();
         attackTimer = me.me.cooldown;
@@ -97,6 +99,12 @@ public class CharacterPanelDelete : MonoBehaviour
                 go.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 30f, ForceMode2D.Impulse);
                 ResetCooldown();
             }
+            else if (me.me.classe == Character.Classe.Narcissistic)
+            {
+                StartTimer(me.me.ability);
+                speTimer = 5f;
+                Tm.refTimer = new Vector2(-0.25f, 4f);
+            }
         }
         if (speTimer < 0f && speTimer > -1f)
         {
@@ -108,6 +116,11 @@ public class CharacterPanelDelete : MonoBehaviour
             if (me.me.classe == Character.Classe.Drunk)
             {
                 pc.speed += 10f;
+                ResetCooldown();
+            }
+            if (me.me.classe == Character.Classe.Narcissistic)
+            {
+                Tm.refTimer = new Vector2(0.5f, 2f);
                 ResetCooldown();
             }
             speTimer = -1.5f;
