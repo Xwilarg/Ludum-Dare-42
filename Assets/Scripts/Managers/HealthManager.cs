@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthManager : MonoBehaviour
 {
@@ -26,5 +27,7 @@ public class HealthManager : MonoBehaviour
                 bars[index].sizeDelta = new Vector2(depas, bars[0].sizeDelta.y);
             }
         }
+        else
+            SceneManager.LoadScene("Win");
     }
 }
