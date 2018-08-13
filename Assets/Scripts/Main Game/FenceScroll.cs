@@ -10,11 +10,6 @@ public class FenceScroll : MonoBehaviour
     {
         Pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         rb2d = GetComponent<Rigidbody2D>();
-        if (rb2d != null)
-        {
-            ScrollSpeed = Pc.speed * Time.deltaTime * 1.5f;
-            rb2d.velocity = new Vector2(-ScrollSpeed, 0f);
-        }
     }
 
     void Update()
