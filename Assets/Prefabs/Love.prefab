@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 50651652667620756}
   - component: {fileID: 212550652099968520}
   - component: {fileID: 61099334426002506}
+  - component: {fileID: 114736545835325572}
   m_Layer: 0
   m_Name: Love
   m_TagString: TsunLove
@@ -87,6 +88,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.61, y: 0.55}
   m_EdgeRadius: 0
+--- !u!114 &114736545835325572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1272865654462294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0875c0f7617410d43803f8160612663c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212550652099968520
 SpriteRenderer:
   m_ObjectHideFlags: 1
