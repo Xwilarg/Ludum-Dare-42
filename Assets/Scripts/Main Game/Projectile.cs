@@ -3,8 +3,12 @@
 [RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
+    [SerializeField]
+    private Sprite explosion;
     private Rigidbody2D rb;
     private BeastComportement Bc;
+    private bool exploded = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,14 +23,16 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Beast") == true)
+        if (exploded == false && collision.CompareTag("Beast") == true)
         {
+            exploded = true;
             GameObject beast = collision.gameObject;
             while (beast.transform.parent != null)
                 beast = beast.transform.parent.gameObject;
             Bc = beast.GetComponent<BeastComportement>();
             Bc.TakeDamage(10);
-            Destroy(this);
+            GetComponent<SpriteRenderer>().sprite = explosion;
+            Destroy(this, 1f);
         }
     }
 }
