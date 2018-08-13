@@ -20,7 +20,7 @@ public class CharacterManager : MonoBehaviour
         timer = Random.Range(refTimer.x, refTimer.y);
         Character.Reset();
     }
-    private bool test = false;
+    private bool test = true;
 
     private void Update()
     {

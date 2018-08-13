@@ -38,6 +38,7 @@ public class CharacterPanelDelete : MonoBehaviour
         StartTimer(me.me.entryLine);
         ResetSpeak();
         attackTimer = me.me.cooldown;
+        ResetCooldown();
         if (me.me.classe == Character.Classe.Clone)
             cooldownPanel.gameObject.SetActive(false);
         speTimer = -1.5f;
