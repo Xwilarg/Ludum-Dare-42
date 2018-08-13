@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private GameObject descriptionPanel;
 
     public GameObject bulletPrefab;
+    public bool airControl { set; get; }
     public float cloneFireRate {set; get;}
     public float score { set; get; }
     private int index;
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
         index = 0;
         inTrap = false;
         cloneFireRate = 1f;
+        airControl = false;
     }
 
     private void Update()
@@ -89,6 +91,8 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(new Vector2(0f, speed / 37.5f), ForceMode2D.Impulse);
             }
         }
+        else if (airControl)
+            rb.velocity += new Vector2(Input.GetAxis("Horizontal"), 0f) * Time.deltaTime * speed / 10f;
     }
 
     public void Loose()

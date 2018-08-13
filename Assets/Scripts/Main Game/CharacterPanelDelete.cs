@@ -183,7 +183,7 @@ public class CharacterPanelDelete : MonoBehaviour
             }
             speTimer = -1.5f;
         }
-        else
+        else if (me.me.cooldown != 0f)
             cooldownPanel.localScale = new Vector3(1f, attackTimer / me.me.cooldown, 0f);
         speakTimer -= Time.deltaTime;
         if (speakTimer < 0f)
