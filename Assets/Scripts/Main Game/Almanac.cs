@@ -6,6 +6,7 @@ public class Almanac : MonoBehaviour
 {
     private List<Character> saved;
     public float score;
+    public PlayerController.Perso perso { private set; get; }
 
     public void AddSaved(Character c)
     {
@@ -18,5 +19,10 @@ public class Almanac : MonoBehaviour
         saved = new List<Character>();
         DontDestroyOnLoad(gameObject);
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void SetPerso(PlayerController.Perso perso)
+    {
+        this.perso = perso;
     }
 }

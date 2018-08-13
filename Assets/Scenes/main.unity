@@ -973,6 +973,10 @@ MonoBehaviour:
   descriptionPanel: {fileID: 2095321321}
   bulletPrefab: {fileID: 1987567542050834, guid: 672247f06f300f54aae4a21761ec977b,
     type: 2}
+  controllers:
+  - {fileID: 9100000, guid: 9dafda516b322bf4596aa81c0437e5db, type: 2}
+  - {fileID: 9100000, guid: 5b53f6791e302284eb44eecc03b5a6de, type: 2}
+  - {fileID: 9100000, guid: de471844fa54c654281b4102e69c1bd1, type: 2}
 --- !u!95 &450397502
 Animator:
   serializedVersion: 3

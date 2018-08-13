@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(SpriteRenderer))]
 public class Projectile : MonoBehaviour
 {
     [SerializeField]
     private GameObject explosionPrefab;
     private Rigidbody2D rb;
     private BeastComportement Bc;
+    private SpriteRenderer sr;
     private bool exploded = false;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -33,7 +36,8 @@ public class Projectile : MonoBehaviour
             Bc.TakeDamage(10);
             GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
             Destroy(explosion, 1);
-            Destroy(this, 1);
+            sr.enabled = false;
+            Destroy(gameObject, 1);
         }
     }
 }

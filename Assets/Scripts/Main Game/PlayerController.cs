@@ -43,6 +43,8 @@ public class PlayerController : MonoBehaviour
     public bool didLost { set; get; }
 
     public bool canTakeDamage { set; get; }
+    [SerializeField]
+    private RuntimeAnimatorController[] controllers;
 
     private void Start()
     {
@@ -57,6 +59,8 @@ public class PlayerController : MonoBehaviour
         inTrap = false;
         cloneFireRate = 1f;
         airControl = false;
+        perso = GameObject.FindGameObjectWithTag("Almanac").GetComponent<Almanac>().perso;
+        anim.runtimeAnimatorController = controllers[(int)perso];
     }
 
     private void Update()
