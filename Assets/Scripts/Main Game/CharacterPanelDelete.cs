@@ -17,15 +17,17 @@ public class CharacterPanelDelete : MonoBehaviour
     private float timer;
     private PanelManager Pm;
     private float attackTimer;
+    private PlayerController pc;
 
     private void Start()
     {
+        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         timer = -1f;
         Pm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<PanelManager>();
         StartTimer(me.me.entryLine);
         ResetSpeak();
         attackTimer = me.me.cooldown;
-        if (me.me.name == "Clone")
+        if (me.me.classe == Character.Classe.Clone)
             cooldownPanel.gameObject.SetActive(false);
     }
 
@@ -41,12 +43,24 @@ public class CharacterPanelDelete : MonoBehaviour
         panelSpeak.SetActive(true);
     }
 
+    private void ResetCooldown()
+    {
+        attackTimer = me.me.cooldown;
+        cooldownPanel.localScale = new Vector3(1f, 1f, 0f);
+        cooldownPanel.gameObject.SetActive(true);
+    }
+
     private void Update()
     {
         attackTimer -= Time.deltaTime;
         if (attackTimer < 0f)
         {
             cooldownPanel.gameObject.SetActive(false);
+            if (me.me.classe == Character.Classe.Medic)
+            {
+                if (pc.Heal())
+                    ResetCooldown();
+            }
         }
         else
             cooldownPanel.localScale = new Vector3(1f, attackTimer / me.me.cooldown, 0f);

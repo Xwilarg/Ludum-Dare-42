@@ -92,6 +92,15 @@ public class PlayerController : MonoBehaviour
         lostText.gameObject.SetActive(true);
     }
 
+    public bool Heal()
+    {
+        if (index == 0)
+            return (false);
+        index--;
+        images[index].color = new Color(1f, 0f, 0.3176f);
+        return (true);
+    }
+
     private void TakeDamage()
     {
         if (index == images.Length - 1)
