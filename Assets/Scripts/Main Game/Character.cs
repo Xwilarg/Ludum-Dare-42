@@ -109,7 +109,7 @@ public class Character
             "I think he’s following us, not sure, I might be stoned too.",
             "You know, I always thought that my left toe was bigger than my right one hehe."
         }, Resources.Load<RuntimeAnimatorController>("DrunkMan/HangingState"), Resources.Load<Sprite>("DrunkMan/SitDown"), Sexe.Male,
-        "Want sum?", 10f, Classe.Drunk, "Homemade alcoohol: 50% +1 Life or 50% lowered speed for a short amount of time.");
+        "Want sum?", 15f, Classe.Drunk, "Homemade alcoohol: 50% +1 Life or 50% lowered speed for a short amount of time.");
 
     public static Character fearful = new Character("Edmund Derp",
         "Is afraid of strange-shaped clouds, likes watch TV with his pet-hamster.",
@@ -124,7 +124,7 @@ public class Character
             "I LOST MY PHONE !!",
             "*glares at infinite endless space around, anxious*",
         }, Resources.Load<RuntimeAnimatorController>("Fearful/HangingState"), Resources.Load<Sprite>("Fearful/SitDown"), Sexe.Male,
-        "Aaaaaaaaaaaaaaaaaaah Ruuuun!!", 10f, Classe.Fearful, "Contagious fear: Increase speed for a short amount of time.");
+        "Aaaaaaaaaaaaaaaaaaah Ruuuun!!", 15f, Classe.Fearful, "Contagious fear: Increase speed for a short amount of time.");
 
     public static Character LittleSister = new Character("Tanya Dezora",
         "Your little sister. Wait… What is she doing here ?",

@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4538445720414742}
   - component: {fileID: 212736925872308264}
-  - component: {fileID: 114797991935391162}
+  - component: {fileID: 114064478294259736}
   m_Layer: 0
   m_Name: StarPrefab
   m_TagString: Trap
@@ -34,14 +34,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1376169590148452}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.764115, y: -0.5442675, z: -0.32381886}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.09, y: 3.85, z: -0.32381886}
+  m_LocalScale: {x: 0.8635, y: 0.8635, z: 0.8635}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114797991935391162
+--- !u!114 &114064478294259736
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,9 +49,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1376169590148452}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f49f466064fe8c1489ecf7a73967e578, type: 3}
+  m_Script: {fileID: 11500000, guid: 66c0d1bd7ec828345b0a7b45f6743366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  starManager: {fileID: 0}
 --- !u!212 &212736925872308264
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -87,14 +89,14 @@ SpriteRenderer:
   m_SortingLayerID: -1783093453
   m_SortingLayer: -4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6c7e6fce9c5983440aec3b7147f5f113, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.08, y: 1.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
