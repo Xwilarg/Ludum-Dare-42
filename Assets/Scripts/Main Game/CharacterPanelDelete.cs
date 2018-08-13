@@ -61,6 +61,17 @@ public class CharacterPanelDelete : MonoBehaviour
         attackTimer = me.me.cooldown;
         cooldownPanel.localScale = new Vector3(1f, 1f, 0f);
         cooldownPanel.gameObject.SetActive(true);
+        setWhite();
+    }
+
+    private void setWhite()
+    {
+        gameObject.GetComponent<Image>().color = Color.white;
+    }
+
+    private void setGreen()
+    {
+        gameObject.GetComponent<Image>().color = Color.green;
     }
 
     private void Update()
@@ -89,6 +100,7 @@ public class CharacterPanelDelete : MonoBehaviour
             else if (me.me.classe == Character.Classe.Fearful)
             {
                 StartTimer(me.me.ability);
+                setGreen();
                 speTimer = 5f;
                 pc.speed += 20f;
             }
@@ -99,6 +111,8 @@ public class CharacterPanelDelete : MonoBehaviour
                 {
                     speTimer = 5f;
                     pc.speed -= 10f;
+                    setGreen();
+
                 }
                 else
                 {
@@ -118,6 +132,7 @@ public class CharacterPanelDelete : MonoBehaviour
                 StartTimer(me.me.ability);
                 speTimer = 5f;
                 Tm.refTimer = new Vector2(-0.25f, 4f);
+                setGreen();
             }
             else if (me.me.classe == Character.Classe.Lost)
             {
@@ -132,6 +147,7 @@ public class CharacterPanelDelete : MonoBehaviour
                     speTimer = 5f;
                     Sm.spawning = false;
                     Tm.spawning = false;
+                    setGreen();
                 }
             }
             else if (me.me.classe == Character.Classe.Vocaloid)
@@ -139,12 +155,14 @@ public class CharacterPanelDelete : MonoBehaviour
                 StartTimer(me.me.ability);
                 speTimer = 5f;
                 pc.cloneFireRate = 0.7f;
+                setGreen();
             }
             else if (me.me.classe == Character.Classe.Sister)
             {
                 StartTimer(me.me.ability);
                 speTimer = 5f;
                 pc.canTakeDamage = false;
+                setGreen();
             }
             else if (me.me.classe == Character.Classe.Dead)
             {
