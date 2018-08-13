@@ -37,7 +37,7 @@ public class MyCharacter : MonoBehaviour
             lr.enabled = false;
         if (timer < 0f)
         {
-            timer = me.weapon.fireRate;
+            timer = me.weapon.fireRate * pc.cloneFireRate;
             if (me.weapon.type == Weapon.WeaponType.Raycast)
             {
                 lr.enabled = true;
