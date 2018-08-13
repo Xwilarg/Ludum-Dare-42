@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class JumpOn : MonoBehaviour {
 
-    private PlayerController Pc;
     private Rigidbody2D rb;
     private float yFall;
 
     private void Start () {
-        Pc = transform.GetComponentInParent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         JumpOnCharacter();
         yFall = Random.Range(-2f, 1.8f);
