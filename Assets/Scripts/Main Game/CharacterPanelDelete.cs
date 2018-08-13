@@ -140,6 +140,12 @@ public class CharacterPanelDelete : MonoBehaviour
                 speTimer = 5f;
                 pc.canTakeDamage = false;
             }
+            else if (me.me.classe == Character.Classe.Dead)
+            {
+                StartTimer(me.me.ability);
+                ResetCooldown();
+                pc.score += 200f;
+            }
         }
         if (speTimer < 0f && speTimer > -1f)
         {

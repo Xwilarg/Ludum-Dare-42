@@ -184,7 +184,7 @@ public class Character
             "...",
             "...",
         }, Resources.Load<RuntimeAnimatorController>("DeadBody/HangingState"), Resources.Load<Sprite>("DeadBody/SitDown"), Sexe.Male,
-        "*dislocate*", 10f, Classe.Dead, "Ded: throws himself on the beast ¯\\_(ツ)_/¯.");
+        "*dislocate a bit more*", 20f, Classe.Dead, "Points from another world: Increase your score");
 
     public static Character Medic = new Character("Albrecht Ludwing",
         "Does not care about life, but will never run out of syringes. Who needs a heart anyway ? You ? Ahahahahah ... No.",
