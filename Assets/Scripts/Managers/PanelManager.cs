@@ -65,6 +65,8 @@ public class PanelManager : MonoBehaviour
     public IEnumerator DelPileCharacter(GameObject obj)
     {
         MTuple<GameObject, MyCharacter> tof = PanelList.Find(x => x.a == obj);
+        if (tof.b.me.classe == Character.Classe.Sport)
+            PlayerCntl.airControl = false;
         tof.a.GetComponent<CharacterPanelDelete>().StartTimer(tof.b.me.exitLine);
         yield return new WaitForSeconds(1);
         PlayerCntl.score -= tof.b.me.weight / Character.WeightMultiplicator;

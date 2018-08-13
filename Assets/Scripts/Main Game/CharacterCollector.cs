@@ -23,6 +23,8 @@ public class CharacterCollector : MonoBehaviour
             collision.transform.parent = transform;
             collision.transform.position = transform.position + new Vector3(0f, .8f) * (1 + Pm.PanelList.Count);
             MyCharacter c = collision.GetComponent<MyCharacter>();
+            if (c.me.classe == Character.Classe.Sport)
+                master.airControl = true;
             c.taken = true;
             master.score += c.me.weight / Character.WeightMultiplicator;
             collision.GetComponent<SpriteRenderer>().sprite = c.me.sitDown;
