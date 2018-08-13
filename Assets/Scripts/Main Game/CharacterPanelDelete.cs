@@ -79,7 +79,11 @@ public class CharacterPanelDelete : MonoBehaviour
         if ((me.me.classe == Character.Classe.Sport && pc.perso != PlayerController.Perso.Rinna)
             || (me.me.classe == Character.Classe.Medic && pc.perso == PlayerController.Perso.Rinna))
         {
-            attackTimer = 0f;
+            if (attackTimer != 0f)
+            {
+                attackTimer = 0f;
+                cooldownPanel.localScale = new Vector3(1f, attackTimer / 0.1f, 0f);
+            }
             return;
         }
         attackTimer -= Time.deltaTime;
