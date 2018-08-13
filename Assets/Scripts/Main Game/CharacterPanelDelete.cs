@@ -134,6 +134,12 @@ public class CharacterPanelDelete : MonoBehaviour
                 speTimer = 5f;
                 pc.cloneFireRate = 0.7f;
             }
+            else if (me.me.classe == Character.Classe.Sister)
+            {
+                StartTimer(me.me.ability);
+                speTimer = 5f;
+                pc.canTakeDamage = false;
+            }
         }
         if (speTimer < 0f && speTimer > -1f)
         {
@@ -162,6 +168,11 @@ public class CharacterPanelDelete : MonoBehaviour
             else if (me.me.classe == Character.Classe.Vocaloid)
             {
                 pc.cloneFireRate = 1f;
+                ResetCooldown();
+            }
+            else if (me.me.classe == Character.Classe.Sister)
+            {
+                pc.canTakeDamage = true;
                 ResetCooldown();
             }
             speTimer = -1.5f;

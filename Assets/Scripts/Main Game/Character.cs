@@ -139,7 +139,7 @@ public class Character
             "I think I peed myself...",
             "What is this big scary thing behind ?",
         }, Resources.Load<RuntimeAnimatorController>("LittleSister/HangingState"), Resources.Load<Sprite>("LittleSister/SitDown"), Sexe.Female,
-        "Take that biggy cat!", 10f, Classe.Sister, "");
+        "As you as we are together, we are invincible!", 20f, Classe.Sister, "Little sister love: Make you invincible for a short time");
 
     public static Character SportGirl = new Character("Rikka Naru",
         "When she was young, Rikka was always sick and stick to bed. Now that she can run around, well, she run around.",
