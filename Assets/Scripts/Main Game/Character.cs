@@ -277,13 +277,13 @@ public class Character
         "It's my turn to shine!", 10f, Classe.Vocaloid, "Joyful song: Increase clone aim for a short time");
 
     public static List<Character> basicCharacters = new List<Character>() {
-       LostChild, tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
+       tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
     };
 
     public static void Reset()
     {
         basicCharacters = new List<Character>() {
-            LostChild, tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
+            tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
         };
     }
 }

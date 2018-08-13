@@ -8,6 +8,7 @@ public class TrapManager : MonoBehaviour
     private GameObject player;
 
     public Vector2 refTimer = new Vector2(0.5f, 2f);
+    public bool spawning = true;
     private float timer;
 
     private void Start()
@@ -18,7 +19,7 @@ public class TrapManager : MonoBehaviour
     private void Update()
     {
         timer -= Time.deltaTime;
-        if (timer < 0f)
+        if (spawning == true && timer < 0f)
         {
             timer = Random.Range(refTimer.x, refTimer.y);
             Instantiate(trapPrefab, new Vector2(15f, Random.Range(-2f, 1.5f)), Quaternion.identity);

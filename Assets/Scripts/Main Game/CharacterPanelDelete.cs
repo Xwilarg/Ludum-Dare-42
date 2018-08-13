@@ -124,7 +124,7 @@ public class CharacterPanelDelete : MonoBehaviour
                     StartTimer(me.me.ability);
                     speTimer = 5f;
                     Sm.spawning = false;
-                    Tm.refTimer = new Vector2(100f, 100f);
+                    Tm.spawning = false;
                 }
             }
             else if (me.me.classe == Character.Classe.Vocaloid)
@@ -154,6 +154,7 @@ public class CharacterPanelDelete : MonoBehaviour
             else if (me.me.classe == Character.Classe.Lost)
             {
                 Sm.spawning = true;
+                Tm.spawning = true;
                 Tm.refTimer = new Vector2(0.5f, 2f);
                 ResetCooldown();
             }
