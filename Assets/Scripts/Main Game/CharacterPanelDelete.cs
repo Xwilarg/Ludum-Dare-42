@@ -67,14 +67,32 @@ public class CharacterPanelDelete : MonoBehaviour
             else if (me.me.classe == Character.Classe.Fearful)
             {
                 speTimer = 5f;
-                pc.speed += 5f;
+                pc.speed += 20f;
+            }
+            else if (me.me.classe == Character.Classe.Drunk)
+            {
+                if (Random.Range(0f, 1f) < 0.5f)
+                {
+                    speTimer = 5f;
+                    pc.speed -= 10f;
+                }
+                else
+                {
+                    pc.Heal();
+                    ResetCooldown();
+                }
             }
         }
         if (speTimer < 0f && speTimer > -1f)
         {
             if (me.me.classe == Character.Classe.Fearful)
             {
-                pc.speed -= 5f;
+                pc.speed -= 20f;
+                ResetCooldown();
+            }
+            if (me.me.classe == Character.Classe.Drunk)
+            {
+                pc.speed += 10f;
                 ResetCooldown();
             }
             speTimer = -1.5f;
