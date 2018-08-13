@@ -6,12 +6,10 @@ public class JumpOn : MonoBehaviour {
 
     private PlayerController Pc;
     private Rigidbody2D rb;
-    private Transform target;
-   
+
     private void Start () {
         Pc = transform.GetComponentInParent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
-        target = Pc.transform;
         JumpOnCharacter();
 	}
 
