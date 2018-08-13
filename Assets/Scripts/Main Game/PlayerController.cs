@@ -97,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
     public bool CanTakeDamage()
     {
-        return (index < images.Length);
+        return (index + 1 < images.Length);
     }
 
     public bool Heal()

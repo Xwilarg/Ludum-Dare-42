@@ -259,7 +259,7 @@ public class Character
             "Could I stay with you after that ?",
             "I don’t know how to thank you ...",
         }, Resources.Load<RuntimeAnimatorController>("LostChild/HangingState"), Resources.Load<Sprite>("LostChild/SitDown"), Sexe.Female,
-        "GO AWAY !", 50f, Classe.Lost, "I'm a strong independant woman: stops mini-poutches and bridge-hole from spawning.");
+        "GO AWAY !", 40f, Classe.Lost, "I'm a strong independant woman: stops mini-poutches and bridge-hole from spawning.");
 
     public static Character Vocaloid = new Character("Pina",
         "Vocaloid singer since she was born, she know nothing else than music.",
