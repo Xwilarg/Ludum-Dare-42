@@ -46,7 +46,10 @@ public class PanelManager : MonoBehaviour
         for (int i = 0; i < 10; i++)
         {
             if ((Input.GetKeyDown(AlphaKeys[i]) || Input.GetKeyDown(NumKeys[i])) && PanelList.Count > i)
+            {
+                PanelList[i].a.GetComponent<CharacterPanelDelete>().DeleteMe(PanelList[i].a);
                 StartCoroutine(DelPileCharacter(PanelList[i].a));
+            }
         }
     }
 
