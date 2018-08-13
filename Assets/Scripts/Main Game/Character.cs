@@ -5,7 +5,7 @@ public class Character
 {
     private Character(string name, string description1,
         float weight, int height, int age, string entryLine, string exitLine, string[] lines,
-        RuntimeAnimatorController hanging, Sprite sitDown, Sexe sexe, string winAlone, float cooldown,
+        RuntimeAnimatorController hanging, Sprite sitDown, Sexe sexe, string ability, float cooldown,
         Classe classe)
     {
         this.name = name;
@@ -20,7 +20,7 @@ public class Character
         this.sitDown = sitDown;
         nbSpecials = 0;
         this.sexe = sexe;
-        this.winAlone = winAlone;
+        this.ability = ability;
         this.cooldown = cooldown;
         weapon = null;
         this.classe = classe;
@@ -62,7 +62,7 @@ public class Character
     public readonly Sprite sitDown;
     public int nbSpecials;
     public readonly Sexe sexe;
-    public readonly string winAlone;
+    public readonly string ability;
     public readonly float cooldown;
     public Weapon weapon;
     public readonly Classe classe;
