@@ -75,6 +75,7 @@ public class CharacterPanelDelete : MonoBehaviour
             }
             else if (me.me.classe == Character.Classe.Drunk)
             {
+                StartTimer(me.me.ability);
                 if (Random.Range(0f, 1f) < 0.5f)
                 {
                     speTimer = 5f;
