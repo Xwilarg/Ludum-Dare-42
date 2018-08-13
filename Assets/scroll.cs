@@ -26,7 +26,7 @@ public class scroll : MonoBehaviour {
             setSprite();
             setSpeed();
         }
-        transform.position = new Vector3(transform.position.x - speed, transform.position.y, 1);
+        transform.position = new Vector3(transform.position.x - speed * Time.deltaTime, transform.position.y, 1);
 	}
 
     void repop()
