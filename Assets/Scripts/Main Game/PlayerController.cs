@@ -18,6 +18,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GameObject descriptionPanel;
 
+    public enum Perso
+    {
+        Boris,
+        Leandre,
+        Rinna
+    }
+
+    public Perso perso { set; get; }
+
     public GameObject bulletPrefab;
     public bool airControl { set; get; }
     public float cloneFireRate {set; get;}

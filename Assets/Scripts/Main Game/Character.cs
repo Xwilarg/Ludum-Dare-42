@@ -154,7 +154,8 @@ public class Character
             "What is this thing behind ? Does it want to fight ?",
             "Next time, you go on my shoulders!",
         }, Resources.Load<RuntimeAnimatorController>("SportGirl/HangingState"), Resources.Load<Sprite>("SportGirl/SitDown"), Sexe.Female,
-        "", 0f, Classe.Sport, "Copilote: You can control your movements while jumping");
+        "I'm glad to be with you, sister!", 50f, Classe.Sport, "Copilote: You can control your movements while jumping" + System.Environment.NewLine +
+                                                             "(If playing Rinna) Sister's love: +1 Life");
 
     public static Character Narcissistic = new Character("Sheldon Tonnelier",
         "Geek, gifted, have a paladin lvl 110 on World of Derpass.",
