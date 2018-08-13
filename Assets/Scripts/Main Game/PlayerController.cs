@@ -88,7 +88,6 @@ public class PlayerController : MonoBehaviour
     public void Loose()
     {
         didLost = true;
-        rb.velocity = Vector2.zero;
         lostText.gameObject.SetActive(true);
         TakeDamage();
         TakeDamage();
@@ -112,6 +111,7 @@ public class PlayerController : MonoBehaviour
         {
             images[index].color = Color.white;
             score -= 30000f;
+            index++;
             Loose();
         }
         else
