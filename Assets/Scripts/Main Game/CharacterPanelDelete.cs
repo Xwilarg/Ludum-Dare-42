@@ -132,7 +132,7 @@ public class CharacterPanelDelete : MonoBehaviour
             {
                 StartTimer(me.me.ability);
                 speTimer = 5f;
-                pc.cloneFireRate = 0.8f;
+                pc.cloneFireRate = 0.7f;
             }
         }
         if (speTimer < 0f && speTimer > -1f)
