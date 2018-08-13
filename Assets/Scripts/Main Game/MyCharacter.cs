@@ -11,7 +11,7 @@ public class MyCharacter : MonoBehaviour
     private PlayerController pc;
     public bool taken { set; private get; }
     private float raycastTimer;
-    private Transform beast;
+
     private float timer;
 
     private void Start()
@@ -22,9 +22,6 @@ public class MyCharacter : MonoBehaviour
         if (me.weapon == null)
             return;
         timer = me.weapon.fireRate;
-        beast = GameObject.FindGameObjectWithTag("Beast").transform;
-        while (beast.parent != null)
-            beast = beast.parent;
     }
 
     public void Update()
@@ -42,7 +39,7 @@ public class MyCharacter : MonoBehaviour
             {
                 lr.enabled = true;
                 raycastTimer = 0.03f;
-                Vector2 dir = beast.position - transform.position;
+                Vector2 dir = new Vector2(-1f, Random.Range(-me.weapon.deviation, me.weapon.deviation));
                 int mask = System.Convert.ToInt32("11111111111111111111100111111011", 2);
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, dir, 1000f, mask);
                 lr.SetPosition(0, transform.position - new Vector3(0f, 0f, 1f));
