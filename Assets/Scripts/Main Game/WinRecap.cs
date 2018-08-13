@@ -15,7 +15,8 @@ public class WinRecap : MonoBehaviour
         win = GameObject.FindGameObjectWithTag("GameManager").GetComponent<WinCharacters>();
         foreach (Character c in win.survivors)
             al.AddSaved(c);
-        text.text = "You sucessfully managed to escape the end of everything by going in a wormhole, but now everything is to rebuild..." + System.Environment.NewLine + System.Environment.NewLine;
+        text.text = "Your final score is: " + al.score.ToString() + System.Environment.NewLine;
+        text.text += "You sucessfully managed to escape the end of everything by going in a wormhole, but now everything is to rebuild..." + System.Environment.NewLine + System.Environment.NewLine;
         if (win.survivors.Count == 0)
             text.text += "Sadly there was nobody to help you on that task so you just ended up dying alone in a small hole, you pathetic piece of garbage. *cough* Anyway, you should try playing again by saving some people.";
         else if (win.survivors.Count == 1)
