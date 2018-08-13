@@ -191,6 +191,7 @@ MonoBehaviour:
   textSpeak: {fileID: 114885887033186952}
   cooldownPanel: {fileID: 224461367024683866}
   lovePrefab: {fileID: 1272865654462294, guid: af33e37ccde679349b62374cd2d4a99a, type: 2}
+  i: {fileID: 114148413307496042}
 --- !u!114 &114433580170408966
 MonoBehaviour:
   m_ObjectHideFlags: 1
