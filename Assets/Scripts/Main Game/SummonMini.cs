@@ -7,11 +7,11 @@ public class SummonMini : MonoBehaviour
     [SerializeField]
     private GameObject MiniPrefab;
     [SerializeField]
-    public PlayerController Pc;
+    public GameObject Pc;
     private float delta;
 
 	void Start () {
-        Pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        Pc = GameObject.FindGameObjectWithTag("Player");
         delta = Time.time;		
 	}
 	
@@ -22,7 +22,7 @@ public class SummonMini : MonoBehaviour
         if (rDelta - delta > 3f)
         {
             GameObject mini = Instantiate(MiniPrefab, transform.position, Quaternion.identity);
-            mini.transform.SetParent(transform);
+            mini.transform.SetParent(Pc.transform);
             delta = rDelta;
         }
     }
