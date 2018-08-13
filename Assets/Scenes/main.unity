@@ -1628,6 +1628,26 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 450397500}
+    - target: {fileID: 198077354768087570, guid: 8bfe819db43e72644bfb743763caa33d,
+        type: 2}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198790002831628272, guid: 8bfe819db43e72644bfb743763caa33d,
+        type: 2}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198486305666453124, guid: 8bfe819db43e72644bfb743763caa33d,
+        type: 2}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198491236153687302, guid: 8bfe819db43e72644bfb743763caa33d,
+        type: 2}
+      propertyPath: moveWithTransform
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8bfe819db43e72644bfb743763caa33d, type: 2}
   m_IsPrefabAsset: 0
