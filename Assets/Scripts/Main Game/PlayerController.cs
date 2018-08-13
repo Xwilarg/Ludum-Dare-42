@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private Text scoreText;
     [SerializeField]
     private GameObject descriptionPanel;
+
     public GameObject bulletPrefab;
     public float cloneFireRate {set; get;}
     public float score { set; get; }
