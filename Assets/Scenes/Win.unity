@@ -634,9 +634,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "With the help of your alliees you managed to kill the beast and save the
     world.\nSome people died for this, but it's not the time for this.\nYou have a
-    whole world to recreate .\n\n\nThanks a lot for playing this game that was made
+    whole world to recreate.\n\n\nThanks a lot for playing this game that was made
     for the Ludum 42.\nI hope you had fun while playing it because we really enjoyed
-    making it.\n\nThis game was made by:\n<b>Graphisms:</b>\nYank\nYuki\n\n<b>Programming:</b>\nChristian
+    making it.\n\nThis game was made by:\n<b>Graphisms:</b>\nYank 2121\nYuki\n\n<b>Programming:</b>\nChristian
     'Zirk' Chaux\nL\xE9andre Blanchard"
 --- !u!222 &1815274828
 CanvasRenderer:
