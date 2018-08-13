@@ -274,7 +274,7 @@ public class Character
             "You threw a lot of people away… I’m kind of glad you’re evil too.",
             "I sometimes feel like I’m lifeless but that doesn’t really bother me",
         }, Resources.Load<RuntimeAnimatorController>("Vocaloid/HangingState"), Resources.Load<Sprite>("Vocaloid/SitDown"), Sexe.Female,
-        "", 10f, Classe.Vocaloid, "");
+        "", 10f, Classe.Vocaloid, "Joyful song: Increase clone aim for a short time");
 
     public static List<Character> basicCharacters = new List<Character>() {
        tsundere, drunkMan, fearful, LittleSister, SportGirl, Narcissistic, DeadBody, Medic, Vocaloid
