@@ -55,7 +55,6 @@ public class PanelManager : MonoBehaviour
         GameObject go = Instantiate(CharacterPanelPrefab, new Vector3(0, 0, 0), Quaternion.identity);
 
         go.transform.SetParent(PilePanel.transform, false);
-        go.transform.position = new Vector3(PanelList.Count * 100 + 30, PilePanel.transform.position.y + 50);
         //go.GetComponentInChildren<Button>().onClick.AddListener(NetCharacter.DisplayDescriptionPanel);
         go.GetComponent<CharacterPanelDelete>().me = NetCharacter;
         Text TextChild = go.GetComponentInChildren<Text>();
