@@ -35,7 +35,7 @@ public class CharacterManager : MonoBehaviour
                 charac.me = Character.basicCharacters[5];
                 test = false;
             }
-            else if (Character.basicCharacters.Count > 0 && Random.Range(0, 1) == 0)
+            else if (Character.basicCharacters.Count > 0 && Random.Range(0, 6) == 0)
                 charac.me = Character.basicCharacters[Random.Range(0, Character.basicCharacters.Count)];
             else
             {
