@@ -56,7 +56,7 @@ public class CharacterPanelDelete : MonoBehaviour
     {
         attackTimer -= Time.deltaTime;
         speTimer -= Time.deltaTime;
-        if (attackTimer < 0f)
+        if (attackTimer < 0f && cooldownPanel.gameObject.activeInHierarchy)
         {
             cooldownPanel.gameObject.SetActive(false);
             if (me.me.classe == Character.Classe.Medic)
