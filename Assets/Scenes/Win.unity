@@ -632,23 +632,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'With the help of your alliees you managed to kill the beast and save the
-    world.
-
-    Some people died for this, but it''s not the time for this.
-
-    You have a whole world to recreate .
-
-
-
-    Thanks a lot for playing this game that was made for the Ludum 42.
-
-    I hope you had fun while playing it because we really enjoyed making it.
-
-
-    This game was made by:
-
-    // TODO: Credits'
+  m_Text: "With the help of your alliees you managed to kill the beast and save the
+    world.\nSome people died for this, but it's not the time for this.\nYou have a
+    whole world to recreate .\n\n\nThanks a lot for playing this game that was made
+    for the Ludum 42.\nI hope you had fun while playing it because we really enjoyed
+    making it.\n\nThis game was made by:\n<b>Graphisms:</b>\nYank\nYuki\n\n<b>Programming:</b>\nChristian
+    'Zirk' Chaux\nL\xE9andre Blanchard"
 --- !u!222 &1815274828
 CanvasRenderer:
   m_ObjectHideFlags: 0
