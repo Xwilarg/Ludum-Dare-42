@@ -67,14 +67,14 @@ public class CharacterPanelDelete : MonoBehaviour
             else if (me.me.classe == Character.Classe.Fearful)
             {
                 speTimer = 5f;
-                pc.speed *= 1.5f;
+                pc.speed += 150f;
             }
         }
         if (speTimer < 0f && speTimer > -1f)
         {
             if (me.me.classe == Character.Classe.Fearful)
             {
-                pc.speed /= 1.5f;
+                pc.speed -= 150f;
                 ResetCooldown();
             }
             speTimer = -1.5f;
