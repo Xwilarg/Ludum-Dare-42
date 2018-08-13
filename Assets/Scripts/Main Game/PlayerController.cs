@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
@@ -43,6 +44,8 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.F5) || Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene("main");
         if (Input.GetKeyDown(KeyCode.Escape))
             descriptionPanel.SetActive(false);
         if (didLost)
