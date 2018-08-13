@@ -6,11 +6,13 @@ public class JumpOn : MonoBehaviour {
 
     private PlayerController Pc;
     private Rigidbody2D rb;
+    private float yFall;
 
     private void Start () {
         Pc = transform.GetComponentInParent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         JumpOnCharacter();
+        yFall = Random.Range(-2f, 1.8f);
 	}
 
     private void TakeDamage(float value)
@@ -20,7 +22,7 @@ public class JumpOn : MonoBehaviour {
 
     private void Update()
     { 
-        if (transform.position.y <= 0)
+        if (transform.position.y <= yFall)
         {
             rb.gravityScale = 0f;
             rb.velocity = new Vector2(rb.velocity.x, 0f);
@@ -31,7 +33,7 @@ public class JumpOn : MonoBehaviour {
 
     private void JumpOnCharacter()
     {
-        float JumpPower = Random.Range(7, 10);
+        float JumpPower = Random.Range(5, 8);
         rb.gravityScale = 1f;
         rb.AddForce(new Vector2(JumpPower, JumpPower), ForceMode2D.Impulse);
     }
