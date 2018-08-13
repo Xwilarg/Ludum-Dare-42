@@ -59,7 +59,6 @@ public class PlayerController : MonoBehaviour
             return;
         }
         anim.speed = speed / 300f;
-        score += speed * Time.deltaTime;
         scoreText.text = "Score: " + score.ToString("00");
         if (isJumping && transform.position.y <= jumpPos.y)
         {
@@ -110,14 +109,14 @@ public class PlayerController : MonoBehaviour
         if (index == images.Length - 1)
         {
             images[index].color = Color.white;
-            score -= 30000f;
+            score -= 100f;
             index++;
             Loose();
         }
         else
         {
             images[index].color = Color.white;
-            score -= 30000f;
+            score -= 100f;
             index++;
         }
     }
