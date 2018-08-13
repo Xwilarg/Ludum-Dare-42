@@ -169,7 +169,7 @@ public class Character
             "You suffer ? Does it affect me ? No ? Then suffer in silence.",
             "A single use of Healing Symbol would save us all, but … hm, yes that’s complicated.",
         }, Resources.Load<RuntimeAnimatorController>("Narcissistic/HangingState"), Resources.Load<Sprite>("Narcissistic/SitDown"), Sexe.Male,
-        "Are you even trying stupid sub-creature ?", 10f, Classe.Narcissistic, "Paladin's luck spell: Reduce hole rate for a short time");
+        "Paladin Luck-spell !!!", 10f, Classe.Narcissistic, "Paladin luck spell: Reduce hole rate for a short time");
 
     public static Character DeadBody = new Character("Ded",
         "Judging by the odor and his eye that rolled away, this person looks dead",
