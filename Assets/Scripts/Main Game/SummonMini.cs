@@ -22,6 +22,7 @@ public class SummonMini : MonoBehaviour
         if (rDelta - delta > 3f)
         {
             GameObject mini = Instantiate(MiniPrefab, transform.position, Quaternion.identity);
+            mini.transform.SetParent(transform);
             delta = rDelta;
         }
     }
