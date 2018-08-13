@@ -6,11 +6,13 @@ public class HealthManager : MonoBehaviour
     public RectTransform[] bars;
     private int index;
     private PlayerController pc;
+    private Almanac Al;
 
     private void Start()
     {
         index = 0;
         pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        Al = GameObject.FindGameObjectWithTag("Almanac").GetComponent<Almanac>();
     }
 
     public void TakeDamage(float value)
@@ -31,6 +33,9 @@ public class HealthManager : MonoBehaviour
             }
         }
         if (index >= bars.Length)
+        {
+            Al.score = pc.score;
             SceneManager.LoadScene("Win");
+        }
     }
 }
