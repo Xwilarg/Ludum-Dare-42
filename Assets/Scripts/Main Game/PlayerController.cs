@@ -32,8 +32,11 @@ public class PlayerController : MonoBehaviour
 
     public bool didLost { set; get; }
 
+    public bool canTakeDamage { set; get; }
+
     private void Start()
     {
+        canTakeDamage = true;
         score = 0f;
         Time.timeScale = 1f;
         rb = GetComponent<Rigidbody2D>();
@@ -92,9 +95,9 @@ public class PlayerController : MonoBehaviour
     {
         didLost = true;
         lostText.gameObject.SetActive(true);
-        TakeDamage();
-        TakeDamage();
-        TakeDamage();
+        TakeDamage(true);
+        TakeDamage(true);
+        TakeDamage(true);
     }
 
     public bool CanTakeDamage()
@@ -111,9 +114,9 @@ public class PlayerController : MonoBehaviour
         return (true);
     }
 
-    public void TakeDamage()
+    public void TakeDamage(bool over = false)
     {
-        if (index >= images.Length)
+        if (index >= images.Length || (!over && !canTakeDamage))
             return;
         if (index == images.Length - 1)
         {
